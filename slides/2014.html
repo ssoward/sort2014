@@ -1,0 +1,130 @@
+<!DOCTYPE html><!--[if lt IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"></html><![endif]--><!--[if IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8"></html><![endif]--><!--[if IE 8]><html lang="en" class="no-js lt-ie9"></html><![endif]--><!--[if gt IE 8]><!-->
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/html"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AngularJS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=1024, user-scalable=no"><!-- Required stylesheets-->
+    <link rel="stylesheet" href="js/core/deck.core.css"><!-- Starter kit custom styles.-->
+    <link rel="stylesheet" href="css/slides.custom.css"><!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="js/extensions/notes/deck.notes.css">
+    <link rel="stylesheet" href="js/extensions/presenterview/deck.presenterview.css">
+    <link rel="stylesheet" href="js/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="js/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="js/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="js/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="js/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="js/extensions/scale/deck.scale.css"><!-- Style theme. More available in /themes/style/ or create your own.--><!--link(rel="stylesheet", href="themes/style/swiss.css")--><!-- Transition. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="js/themes/transition/horizontal-slide.css"><!-- Plugin: CodeMirror-->
+    <link rel="stylesheet" href="js/plugins/codemirror/deck.codemirror.css">
+    <link rel="stylesheet" href="js/plugins/codemirror/themes/elegant.css"><!-- Modernizr.-->
+    <link rel="stylesheet" href="css/bootstrap.css.min.css"><!-- Modernizr.-->
+    <script src="js/vendor/modernizr.custom.js"></script>
+    <style>
+        .popquiz{
+            color: #111;
+        }
+    </style>
+</head>
+<body class="body">
+<div class="deck-container">
+
+
+    <!--put new slides in section tag below and increment the id-->
+
+    <section id="a" class="slide">
+        <h1><img width="500px" src="./images/handtowel.jpg"/>
+            <div class="subtitle">AngularJS Promises - Sequenital Async</div></h1>
+    </section>
+
+    <section id="b" class="slide">
+        <h2>Leave before you waste any time</h2>
+        <div class="figure ">
+            <!-- Intro. -->
+            <ul>
+                <li>Intro AJAX</li>
+                <li>AngularJS Promies</li>
+            </ul>
+
+            <div style="color: #888; position: absolute; bottom: 10px">
+                <div>Scott  @scottsoward</div>
+                <div>Nils   @nilsrasmusson</div>
+                <div>http://ssoward.github.io/sort2014</div>
+            </div>
+        </div>
+        <img src="./images/AngularJS-Shield-small.png" class="bottom-right"/>
+    </section>
+
+
+    <!-- deck.navigation snippet-->
+    <a target="_blank" href="#" title="Previous" class="deck-prev-link">&#8592;</a>
+    <a target="_blank" href="#" title="Next" class="deck-next-link">&#8594;</a>
+    <!-- deck.status snippet-->
+    <p class="deck-status">
+        <span class="deck-status-current"></span>/<span class="deck-status-total"></span></p>
+    <!-- deck.goto snippet-->
+    <form action="." method="get" class="goto-form">
+        <label for="goto-slide">Go to slide:</label>
+        <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+        <datalist id="goto-datalist"></datalist>
+        <input type="submit" value="Go">
+    </form>
+    <!--deck.hash snippet-->
+    <a target="_blank" href="." title="Permalink to this slide" class="deck-permalink">#</a>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Required JS files.-->
+<script src="js/vendor/jquery-1.8.2.min.js"></script>
+<script src="js/vendor/coffee-script-1.4.0.min.js"></script>
+<script src="js/core/deck.core.js"></script>
+<!-- Plugin: CodeMirror (with CoffeeScript enhancements).-->
+<script src="js/plugins/codemirror/codemirror.js"></script>
+<script src="js/plugins/codemirror/mode/javascript/javascript.js"></script>
+<script src="js/plugins/codemirror/mode/coffeescript/coffeescript.js"></script>
+<script src="js/plugins/codemirror/deck.codemirror.js"></script>
+<!-- Extensiojs/n JS files. Add or remove as needed.-->
+<script src="js/extensions/hash/deck.hash.js"></script>
+<script src="js/extensions/menu/deck.menu.js"></script>
+<script src="js/extensions/goto/deck.goto.js"></script>
+<script src="js/extensions/status/deck.status.js"></script>
+<script src="js/extensions/navigation/deck.navigation.js"></script>
+<script src="js/extensions/scale/deck.scale.js"></script>
+<script src="js/extensions/clone/deck.clone.js"></script>
+<script src="js/extensions/presenterview/deck.presenterview.js"></script>
+<script src="js/extensions/hash/deck.hash.js"></script>
+<!--
+<script src="extensions/notes/deck.notes.js"></script>
+<script src="extensions/notes/deck.scottsNotes.js"></script>
+-->
+<!-- Initialize the deck.-->
+<script>$(function() {
+    $.deck('.slide', {
+        codemirror: {
+            lineNumbers: true,
+            theme: "elegant",
+            indentUnit: 2,
+            indentWithTabs: false,
+            runnable: false
+        }
+    });
+});
+</script>
+<script>
+    $(".popquiz").mouseover(function(){
+        $(this).css("color", "white");
+    });
+    $(".popquiz").mouseout(function(){
+        $(this).css("color", "#111");
+    });
+</script>
+</body>
+</html>
