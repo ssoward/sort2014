@@ -9,7 +9,17 @@ angular.module('myApp').controller('AdminController', function ($scope, HomeServ
                 $scope.users = users;
             });
         });
+    }
 
+    this.deferMyFunction = function(){
+
+        var defer = $q.defer();
+
+        defer.promise.then(function(){
+           $log.info('finished my promise');
+        });
+
+        defer.resolve();
 
     }
 });

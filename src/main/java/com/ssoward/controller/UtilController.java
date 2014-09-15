@@ -1,7 +1,6 @@
 package com.ssoward.controller;
 
 import com.ssoward.model.Users;
-import com.ssoward.service.TestUtil;
 import com.ssoward.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,8 +22,8 @@ import java.util.List;
 @RequestMapping("/")
 public class UtilController {
 
-     @Autowired
-     UserService userService;
+    @Autowired
+    UserService userService;
 
     @RequestMapping(method = RequestMethod.GET, value="/logout", produces = MediaType.APPLICATION_JSON_VALUE)
     public void logout(HttpServletRequest request) {
