@@ -30,30 +30,81 @@
 <body class="body">
 <div class="deck-container">
 
-
     <!--put new slides in section tag below and increment the id-->
 
     <section id="a" class="slide">
-        <h1><img width="500px" src="./images/handtowel.jpg"/>
+        <h1><img width="700px" src="./images/morningglory.JPG"/>
             <div class="subtitle">AngularJS Promises - Sequenital Async</div></h1>
     </section>
 
     <section id="b" class="slide">
-        <h2>Leave before you waste any time</h2>
+        <h2>What's in store</h2>
         <div class="figure ">
-            <!-- Intro. -->
             <ul>
-                <li>Intro AJAX</li>
+                <li>Browswer Single-threaded</li>
+                <li>Intro to AJAX</li>
+                <li>What is a Promies</li>
                 <li>AngularJS Promies</li>
             </ul>
 
             <div style="color: #888; position: absolute; bottom: 10px">
-                <div>Scott  @scottsoward</div>
+                <div>Scott  @scottlsoward</div>
                 <div>Nils   @nilsrasmusson</div>
                 <div>http://ssoward.github.io/sort2014</div>
             </div>
         </div>
-        <img src="./images/AngularJS-Shield-small.png" class="bottom-right"/>
+    </section>
+
+    <section id="c" class="slide">
+        <!--
+        <ul>
+            <li>JavaScript engines only have a single thread</li>
+            <li>JavaScript can only ever execute one piece of code at a time</li>
+            <li>Tasks live on queue and are completed sequentially</li>
+            <li>Asynchronous events are put in a queue and wait for execution</li>
+        </ul>
+
+        -->
+
+        <h2>One Thread</h2>
+        <div class="figure">
+            <img width="700px" src="./images/rope.JPG"/>
+        </div>
+    </section>
+
+    <section id="d" class="slide">
+        <!--
+        <ul>
+            <li>Secrets of the JavaScript Ninja - John Resig</li>
+            <li>Browser event loop is single-threaded</li>
+            <li>Events are placed into the event queue</li>
+            <li>Events are handled in the order that its placed onto the queue</li>
+            <li>FIFO: first in first out</li>
+            <li>"Under no circumstances are two handlers executing simultaneously in separate threads"</li>
+        </ul>
+
+        -->
+
+        <h2>Event Loop</h2>
+        <div class="figure">
+            <img width="700px" src="./images/singleThread.png"/>
+        </div>
+    </section>
+
+    <section id="e" class="slide">
+        <!--
+        <ul>
+            <li>Callback functions are derived from a programming paradigm called functional programming</li>
+            <li>functional programming is the use of functions as arguments</li>
+            <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
+        </ul>
+
+        -->
+
+        <h2>Callbacks</h2>
+        <div class="figure">`
+            <img width="700px" src="./images/singleThread.png"/>
+        </div>
     </section>
 
 
@@ -72,8 +123,8 @@
     </form>
     <!--deck.hash snippet-->
     <a target="_blank" href="." title="Permalink to this slide" class="deck-permalink">#</a>
+    <img src="./images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
 </div>
-
 
 
 
