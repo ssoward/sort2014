@@ -25,6 +25,9 @@
         .popquiz{
             color: #111;
         }
+        .img_width{
+            width: 600px;
+        }
     </style>
 </head>
 <body class="body">
@@ -33,18 +36,18 @@
     <!--put new slides in section tag below and increment the id-->
 
     <section id="a" class="slide">
-        <h1><img width="700px" src="./images/morningglory.JPG"/>
+        <h1><img class="img_width" src="./images/morningglory.JPG"/>
             <div class="subtitle">AngularJS Promises - Sequenital Async</div></h1>
     </section>
 
     <section id="b" class="slide">
         <h2>What's in store</h2>
-        <div class="figure ">
+        <div class="figure">
             <ul>
-                <li>Browswer Single-threaded</li>
-                <li>Intro to AJAX</li>
-                <li>What is a Promies</li>
-                <li>AngularJS Promies</li>
+                <li>Browser</li>
+                <li>AJAX</li>
+                <li>Promise</li>
+                <li>AngularJS</li>
             </ul>
 
             <div style="color: #888; position: absolute; bottom: 10px">
@@ -68,7 +71,7 @@
 
         <h2>One Thread</h2>
         <div class="figure">
-            <img width="700px" src="./images/rope.JPG"/>
+            <img class="img_width" src="./images/rope.JPG"/>
         </div>
     </section>
 
@@ -87,23 +90,27 @@
 
         <h2>Event Loop</h2>
         <div class="figure">
-            <img width="700px" src="./images/singleThread.png"/>
+            <img class="img_width" src="./images/singleThread.png"/>
         </div>
     </section>
 
     <section id="e" class="slide">
         <!--
         <ul>
+            <li>Callback function is also known as a callback pattern</li>
             <li>Callback functions are derived from a programming paradigm called functional programming</li>
-            <li>functional programming is the use of functions as arguments</li>
+            <li>Functional programming is the use of functions as arguments</li>
             <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
         </ul>
 
         -->
 
         <h2>Callbacks</h2>
-        <div class="figure">`
-            <img width="700px" src="./images/singleThread.png"/>
+        <div class="figure">
+            <img class="img_width" src="./images/callback.png"/>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="buttonClick()">Call me back</a></li>
+            </ul>
         </div>
     </section>
 
@@ -176,6 +183,23 @@
     $(".popquiz").mouseout(function(){
         $(this).css("color", "#111");
     });
+
+    function buttonClick(){
+        console.log('hello, click event');
+        functionWhichTakesFunctionAsArgument(callback);
+    }
+
+    var callback = function(user){
+        console.log('callback time: '+user);
+    };
+
+    function functionWhichTakesFunctionAsArgument(callback){
+        console.log('first function');
+        //... do something
+        var result = Math.random();
+        callback(result);
+    };
+
 </script>
 </body>
 </html>
