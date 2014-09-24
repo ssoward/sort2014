@@ -26,14 +26,12 @@
             color: #111;
         }
         .img_width{
-            width: 600px;
+            width: 700px;
         }
     </style>
 </head>
 <body class="body">
 <div class="deck-container">
-
-    <!--put new slides in section tag below and increment the id-->
 
     <section id="a" class="slide">
         <h1><img class="img_width" src="./images/morningglory.JPG"/>
@@ -66,7 +64,6 @@
             <li>Tasks live on queue and are completed sequentially</li>
             <li>Asynchronous events are put in a queue and wait for execution</li>
         </ul>
-
         -->
 
         <h2>One Thread</h2>
@@ -85,7 +82,6 @@
             <li>FIFO: first in first out</li>
             <li>"Under no circumstances are two handlers executing simultaneously in separate threads"</li>
         </ul>
-
         -->
 
         <h2>Event Loop</h2>
@@ -102,9 +98,7 @@
             <li>Functional programming is the use of functions as arguments</li>
             <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
         </ul>
-
         -->
-
         <h2>Callbacks</h2>
         <div class="figure">
             <img class="img_width" src="./images/callback.png"/>
@@ -113,6 +107,46 @@
             </ul>
         </div>
     </section>
+
+    <section id="f" class="slide">
+        <!--
+        <ul>
+            <li>AJAX = Asynchronous JavaScript and XML</li>
+        </ul>
+        -->
+        <h2>AJAX</h2>
+        <div class="figure">
+            <img class="img_width" src="./images/callback2.png"/>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="g" class="slide">
+        <!--
+        <ul>
+            <li></li>
+        </ul>
+        -->
+        <h2>The First Problem</h2>
+        <div class="figure">
+            <img class="img_width" src="./images/callback2.png"/>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- deck.navigation snippet-->
@@ -132,13 +166,6 @@
     <a target="_blank" href="." title="Permalink to this slide" class="deck-permalink">#</a>
     <img src="./images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
 </div>
-
-
-
-
-
-
-
 
 <!-- Required JS files.-->
 <script src="js/vendor/jquery-1.8.2.min.js"></script>
@@ -184,21 +211,48 @@
         $(this).css("color", "#111");
     });
 
+
+    // Callbacks
+
     function buttonClick(){
         console.log('hello, click event');
         functionWhichTakesFunctionAsArgument(callback);
     }
 
-    var callback = function(user){
-        console.log('callback time: '+user);
+    var callback = function(data){
+        console.log('callback time! '+data);
     };
 
     function functionWhichTakesFunctionAsArgument(callback){
-        console.log('first function');
+        console.log('first function execution');
         //... do something
-        var result = Math.random();
-        callback(result);
+        var response = Math.random();
+        callback(response);
     };
+
+    // AJAX
+
+    function buttonClick2(){
+        console.log('hello, click event');
+        functionWhichTakesFunctionAsArgument2(callback);
+        console.log('No Blocking!!')
+    }
+
+    var callback2 = function(data){
+        console.log('callback time! '+data);
+    };
+
+    function functionWhichTakesFunctionAsArgument2(callback){
+        console.log('first function execution');
+        //... do something
+        setTimeout(function(){
+            var response = Math.random();
+            callback(response);
+        }, 3000);
+    };
+
+
+
 
 </script>
 </body>
