@@ -26,185 +26,215 @@
             color: #111;
         }
         .img_width{
-            width: 85%;
+            width: 600px;
         }
     </style>
 </head>
 <body class="body">
 <div class="deck-container">
 
-    <section id="a" class="slide">
-        <h1><img class="img_width" src="./images/morningglory.JPG"/>
-            <div class="subtitle">AngularJS Promises - Sequenital Async</div></h1>
-    </section>
+<section id="a" class="slide">
+    <img class="img_width" src="./images/morningglory.JPG"/>
+    <div class="subtitle"><h4>AngularJS Promises - Sequenital Async</h4></div>
+</section>
 
-    <section id="b" class="slide">
-        <h2>What's in store</h2>
-        <div class="figure">
-            <ul>
-                <li>Browser</li>
-                <li>AJAX</li>
-                <li>Promise</li>
-                <li>AngularJS</li>
-            </ul>
-
-            <div style="color: #888; position: absolute; bottom: 10px">
-                <div>Scott  @scottlsoward</div>
-                <div>Nils   @nilsrasmusson</div>
-                <div>http://ssoward.github.io/sort2014</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="c" class="slide">
-        <!--
+<section id="b" class="slide">
+    <h2>What's in store</h2>
+    <div class="figure">
         <ul>
-            <li>JavaScript engines only have a single thread</li>
-            <li>JavaScript can only ever execute one piece of code at a time</li>
-            <li>Tasks live on queue and are completed sequentially</li>
-            <li>Asynchronous events are put in a queue and wait for execution</li>
+            <li>Browser</li>
+            <li>AJAX</li>
+            <li>Promise</li>
+            <li>AngularJS</li>
         </ul>
-        -->
 
-        <h2>One Thread</h2>
-        <div class="figure">
-            <img class="img_width" src="./images/rope.JPG"/>
+        <div style="color: #888; position: absolute; bottom: 10px">
+            <div>Scott  @scottlsoward</div>
+            <div>Nils   @nilsrasmusson</div>
+            <div>http://ssoward.github.io/sort2014</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="d" class="slide">
-        <!--
+<section id="c" class="slide">
+    <!--
+    <ul>
+        <li>JavaScript engines only have a single thread</li>
+        <li>JavaScript can only ever execute one piece of code at a time</li>
+        <li>Tasks live on queue and are completed sequentially</li>
+        <li>Asynchronous events are put in a queue and wait for execution</li>
+    </ul>
+    -->
+
+    <h2>One Thread</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/rope.JPG"/>
+    </div>
+</section>
+
+<section id="d" class="slide">
+    <!--
+    <ul>
+        <li>Secrets of the JavaScript Ninja - John Resig</li>
+        <li>Browser event loop is single-threaded</li>
+        <li>Events are placed into the event queue</li>
+        <li>Events are handled in the order that its placed onto the queue</li>
+        <li>FIFO: first in first out</li>
+        <li>"Under no circumstances are two handlers executing simultaneously in separate threads"</li>
+    </ul>
+    -->
+
+    <h2>Event Loop</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/singleThread.png"/>
+    </div>
+</section>
+
+<section id="e" class="slide">
+    <!--
+    <ul>
+        <li>Callback function is also known as a callback pattern</li>
+        <li>Callback functions are derived from a programming paradigm called functional programming</li>
+        <li>Functional programming is the use of functions as arguments</li>
+        <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
+    </ul>
+    -->
+    <h2>Callbacks</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/callback.png"/>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="buttonClick()">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="f" class="slide">
+    <!--
+    <ul>
+        <li>AJAX = Asynchronous JavaScript and XML</li>
+    </ul>
+    -->
+    <h2>AJAX</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/callback2.png"/>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="g" class="slide">
+    <!--
+    <ul>
+        <li>You Ugly!</li>
+    </ul>
+    -->
+    <h2>AJAX</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/ajaxOldSchool.png"/>
+        <div id="ajaxDiv">Some Static data</div>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="loadXMLDoc('ajaxDiv')">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="i" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Nesting</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/ajaxNesting.png"/>
+    </div>
+</section>
+
+<section id="j" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Nesting</h2>
+    <div class="figure">
+        <!--<img class="img_width" src="./images/ajaxNesting.png"/>-->
+        <div id="nest1">div1</div>
+        <div id="nest2">div2</div>
+        <div id="nest3">div3</div>
+        <div id="nest4">div4</div>
+        <div id="nest5">div5</div>
+        <div id="nest6">div6</div>
+        <div id="nest7">div7</div>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="nestedMethod()">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="k" class="slide">
+    <!--
+    <ul>
+        <li>Angular</li>
+    </ul>
+    -->
+    <h2>Promises</h2>
+    <div class="figure">
+        A promise
+        represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.
+        <a class="img_width" href="http://promisesaplus.com/#point-2">Promises/A+</a>
+    </div>
+</section>
+
+<section id="l" class="slide">
+    <!--
+    <ul>
+        <li>Angular</li>
+    </ul>
+    -->
+    <h2>Terminology</h2>
+    <div class="figure">
         <ul>
-            <li>Secrets of the JavaScript Ninja - John Resig</li>
-            <li>Browser event loop is single-threaded</li>
-            <li>Events are placed into the event queue</li>
-            <li>Events are handled in the order that its placed onto the queue</li>
-            <li>FIFO: first in first out</li>
-            <li>"Under no circumstances are two handlers executing simultaneously in separate threads"</li>
+            <li>“promise” is an object/function with a then method.</li>
+            <li>“thenable” is an object/function that defines a then method.</li>
+            <li>“value” is any legal JavaScript value (undefined, thenable, promise, etc).</li>
+            <li>“exception” is a value that is thrown using the throw statement.</li>
+            <li>“reason” is a value that indicates why a promise was rejected.</li>
         </ul>
-        -->
+    </div>
+</section>
 
-        <h2>Event Loop</h2>
-        <div class="figure">
-            <img class="img_width" src="./images/singleThread.png"/>
-        </div>
-    </section>
-
-    <section id="e" class="slide">
-        <!--
+<section id="m" class="slide">
+    <!--
+    <ul>
+        <li>Angular</li>
+    </ul>
+    -->
+    <h2>Three States</h2>
+    <div class="figure">
         <ul>
-            <li>Callback function is also known as a callback pattern</li>
-            <li>Callback functions are derived from a programming paradigm called functional programming</li>
-            <li>Functional programming is the use of functions as arguments</li>
-            <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
+            <li>Pending: transition to either the fulfilled or rejected state</li>
+            <li>Fulfilled: must not transition to any other state.
+                must have a value, which must not change</li>
+            <li>Rejected: must not transition to any other state.
+                must have a reason, which must not change.</li>
         </ul>
-        -->
-        <h2>Callbacks</h2>
-        <div class="figure">
-            <img class="img_width" src="./images/callback.png"/>
-            <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="buttonClick()">Call me back</a></li>
-            </ul>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <section id="f" class="slide">
-        <!--
-        <ul>
-            <li>AJAX = Asynchronous JavaScript and XML</li>
-        </ul>
-        -->
-        <h2>AJAX</h2>
-        <div class="figure">
-            <img class="img_width" src="./images/callback2.png"/>
-            <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="g" class="slide">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2>Problem: nesting</h2>
-        <div class="figure">
-            <img class="img_width" src="./images/ajaxNesting.png"/>
-            <div id="myDiv1">Some Static data</div>
-            <div id="myDiv2">Some Static data</div>
-            <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="loadXMLDoc()">Call me back</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="i" class="slide">
-        <!--
-        <ul>
-            <li>You Ugly!</li>
-        </ul>
-        -->
-        <h2>AJAX</h2>
-        <div class="figure">
-            <img class="img_width" src="./images/ajaxOldSchool.png"/>
-            <div id="myDiv">Some Static data</div>
-            <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="loadXMLDoc()">Call me back</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="j" class="slide">
-        <!--
-        <ul>
-            <li>Angular</li>
-        </ul>
-        -->
-        <h2>Solution: Promises</h2>
-        <div class="figure">
-            A promise
-            represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.
-            <a class="img_width" href="http://promisesaplus.com/#point-2">Promises/A+</a>
-        </div>
-    </section>
-
-    <section id="k" class="slide">
-        <!--
-        <ul>
-            <li>Angular</li>
-        </ul>
-        -->
-        <h2>Terminology</h2>
-        <div class="figure">
-            <ul>
-                <li>“promise” is an object/function with a then method.</li>
-                <li>“thenable” is an object/function that defines a then method.</li>
-                <li>“value” is any legal JavaScript value (undefined, thenable, promise, etc).</li>
-                <li>“exception” is a value that is thrown using the throw statement.</li>
-                <li>“reason” is a value that indicates why a promise was rejected.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="l" class="slide">
-        <!--
-        <ul>
-            <li>Angular</li>
-        </ul>
-        -->
-        <h2>Three States</h2>
-        <div class="figure">
-            <ul>
-                <li>Pending: transition to either the fulfilled or rejected state</li>
-                <li>Fulfilled: must not transition to any other state.
-                    must have a value, which must not change</li>
-                <li>Rejected: must not transition to any other state.
-                    must have a reason, which must not change.</li>
-            </ul>
-        </div>
-    </section>
+<section id="n" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Promise</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/promise.png"/>
+        <a class="btn btn-primary" onclick="promise()">Call me back</a>
+    </div>
+</section>
 
 
 
@@ -217,22 +247,23 @@
 
 
 
-    <!-- deck.navigation snippet-->
-    <a target="_blank" href="#" title="Previous" class="deck-prev-link">&#8592;</a>
-    <a target="_blank" href="#" title="Next" class="deck-next-link">&#8594;</a>
-    <!-- deck.status snippet-->
-    <p class="deck-status">
-        <span class="deck-status-current"></span>/<span class="deck-status-total"></span></p>
-    <!-- deck.goto snippet-->
-    <form action="." method="get" class="goto-form">
-        <label for="goto-slide">Go to slide:</label>
-        <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
-        <datalist id="goto-datalist"></datalist>
-        <input type="submit" value="Go">
-    </form>
-    <!--deck.hash snippet-->
-    <a target="_blank" href="." title="Permalink to this slide" class="deck-permalink">#</a>
-    <img src="./images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
+
+<!-- deck.navigation snippet-->
+<a target="_blank" href="#" title="Previous" class="deck-prev-link">&#8592;</a>
+<a target="_blank" href="#" title="Next" class="deck-next-link">&#8594;</a>
+<!-- deck.status snippet-->
+<p class="deck-status">
+    <span class="deck-status-current"></span>/<span class="deck-status-total"></span></p>
+<!-- deck.goto snippet-->
+<form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+</form>
+<!--deck.hash snippet-->
+<a target="_blank" href="." title="Permalink to this slide" class="deck-permalink">#</a>
+<img src="./images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
 </div>
 
 <!-- Required JS files.-->
@@ -320,7 +351,7 @@
     };
 
 
-    function loadXMLDoc(){
+    function loadXMLDoc(someDiv, callback){
         var xmlhttp;
         if (window.XMLHttpRequest){
             xmlhttp=new XMLHttpRequest();
@@ -330,28 +361,52 @@
         }
         xmlhttp.onreadystatechange=function(){
             if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+                document.getElementById(someDiv).innerHTML=xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","/ajax/test",true);
+        xmlhttp.open("GET","/ajax/test?val="+someDiv,false);
         xmlhttp.send();
+        if(callback) {
+            callback(null, xmlhttp.responseText);
+        }
+        return xmlhttp.responseText;
     }
 
-    function loadXMLDoc1(){
-        var xmlhttp;
-        if (window.XMLHttpRequest){
-            xmlhttp=new XMLHttpRequest();
-        }
-        else{
-            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange=function(){
-            if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    function nestedMethod(){
+        loadXMLDoc('nest1', function(result){
+            loadXMLDoc('nest2', function(result){
+                loadXMLDoc('nest3', function(result){
+                    loadXMLDoc('nest4', function(result){
+                        loadXMLDoc('nest5', function(result){
+                            loadXMLDoc('nest6', function(result){
+                                loadXMLDoc('nest7', function(result){
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    };
+
+    function loadXMLDocThen(someDiv){
+        var response = loadXMLDoc(someDiv);
+        return {
+            then: function(callback) {
+                if (callback) {
+                    callback(response);
+                }
             }
-        }
-        xmlhttp.open("GET","/ajax/test",true);
-        xmlhttp.send();
+        };
+    }
+
+    function promise() {
+        var promise = loadXMLDocThen('nest1');
+
+        promise.then(function(res){
+            console.log(res);
+            return loadXMLDocThen('nest2');
+        });
     }
 
 

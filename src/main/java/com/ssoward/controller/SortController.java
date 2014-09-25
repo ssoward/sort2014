@@ -30,10 +30,11 @@ public class SortController {
     UserService userService;
 
     @RequestMapping(method = RequestMethod.GET, value="/test", produces = MediaType.APPLICATION_JSON_VALUE)
-    public void oldSchoolAjax(HttpServletRequest request, HttpServletResponse response) {
+    public void oldSchoolAjax(HttpServletRequest request, HttpServletResponse response, @RequestParam String  val) {
         try {
-            response.getWriter().print( "Returned from server at "+ new Date());
-        } catch (IOException e) {
+            Thread.sleep(500l);
+            response.getWriter().print( val + " Returned from server at "+ new Date());
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
