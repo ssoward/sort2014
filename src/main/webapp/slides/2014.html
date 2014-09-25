@@ -26,7 +26,7 @@
             color: #111;
         }
         .img_width{
-            width: 700px;
+            width: 85%;
         }
     </style>
 </head>
@@ -126,14 +126,82 @@
     <section id="g" class="slide">
         <!--
         <ul>
-            <li></li>
+            <li>When se</li>
         </ul>
         -->
-        <h2>The First Problem</h2>
+        <h2>Problem: nesting</h2>
         <div class="figure">
-            <img class="img_width" src="./images/callback2.png"/>
+            <img class="img_width" src="./images/ajaxNesting.png"/>
+            <div id="myDiv1">Some Static data</div>
+            <div id="myDiv2">Some Static data</div>
             <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+                <li><a class="btn btn-primary" onclick="loadXMLDoc()">Call me back</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="i" class="slide">
+        <!--
+        <ul>
+            <li>You Ugly!</li>
+        </ul>
+        -->
+        <h2>AJAX</h2>
+        <div class="figure">
+            <img class="img_width" src="./images/ajaxOldSchool.png"/>
+            <div id="myDiv">Some Static data</div>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="loadXMLDoc()">Call me back</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="j" class="slide">
+        <!--
+        <ul>
+            <li>Angular</li>
+        </ul>
+        -->
+        <h2>Solution: Promises</h2>
+        <div class="figure">
+            A promise
+            represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.
+            <a class="img_width" href="http://promisesaplus.com/#point-2">Promises/A+</a>
+        </div>
+    </section>
+
+    <section id="k" class="slide">
+        <!--
+        <ul>
+            <li>Angular</li>
+        </ul>
+        -->
+        <h2>Terminology</h2>
+        <div class="figure">
+            <ul>
+                <li>“promise” is an object/function with a then method.</li>
+                <li>“thenable” is an object/function that defines a then method.</li>
+                <li>“value” is any legal JavaScript value (undefined, thenable, promise, etc).</li>
+                <li>“exception” is a value that is thrown using the throw statement.</li>
+                <li>“reason” is a value that indicates why a promise was rejected.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="l" class="slide">
+        <!--
+        <ul>
+            <li>Angular</li>
+        </ul>
+        -->
+        <h2>Three States</h2>
+        <div class="figure">
+            <ul>
+                <li>Pending: transition to either the fulfilled or rejected state</li>
+                <li>Fulfilled: must not transition to any other state.
+                    must have a value, which must not change</li>
+                <li>Rejected: must not transition to any other state.
+                    must have a reason, which must not change.</li>
             </ul>
         </div>
     </section>
@@ -251,6 +319,40 @@
         }, 3000);
     };
 
+
+    function loadXMLDoc(){
+        var xmlhttp;
+        if (window.XMLHttpRequest){
+            xmlhttp=new XMLHttpRequest();
+        }
+        else{
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function(){
+            if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","/ajax/test",true);
+        xmlhttp.send();
+    }
+
+    function loadXMLDoc1(){
+        var xmlhttp;
+        if (window.XMLHttpRequest){
+            xmlhttp=new XMLHttpRequest();
+        }
+        else{
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function(){
+            if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","/ajax/test",true);
+        xmlhttp.send();
+    }
 
 
 
