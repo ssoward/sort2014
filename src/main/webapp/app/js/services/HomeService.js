@@ -24,22 +24,22 @@ angular.module('myApp').service('HomeService', function ($http, $log) {
     };
 });
 
-function loadXMLDoc(){
-    var xmlhttp;
-    if (window.XMLHttpRequest)  {
-        xmlhttp=new XMLHttpRequest();
-    }
-    else {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function()  {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)    {
-            document.getElementById("aDiv").innerHTML=xmlhttp.responseText;
-        }
-    }
-    xmlhttp.open("GET","/someEndpoint",true);
-    xmlhttp.send();
-}
+//function loadXMLDoc(){
+//    var xmlhttp;
+//    if (window.XMLHttpRequest)  {
+//        xmlhttp=new XMLHttpRequest();
+//    }
+//    else {
+//        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+//    }
+//    xmlhttp.onreadystatechange=function()  {
+//        if (xmlhttp.readyState==4 && xmlhttp.status==200)    {
+//            document.getElementById("aDiv").innerHTML=xmlhttp.responseText;
+//        }
+//    }
+//    xmlhttp.open("GET","/someEndpoint",true);
+//    xmlhttp.send();
+//}
 
 this.getUser = function () {
     return HomeService.doFirst(pId)

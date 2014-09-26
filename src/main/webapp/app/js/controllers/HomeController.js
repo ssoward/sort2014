@@ -15,7 +15,6 @@ var homeController = angular.module('myApp').controller('HomeController', functi
     $scope.deferMyFunction = function (){
 
         $log.info('starting my defer function');
-
         var defer = $q.defer();
 
         defer.promise
