@@ -1,0 +1,29 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper section {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#note, #next-slide, #curr-slide  {
+  height: 500px;
+  display:inline-table;
+  float: left;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#note {
+    width: 50%;
+    font-size: 25px;
+}
+
+#curr-slide {
+    width: 300px;
+}
+#next-slide {
+    width: 300px;
+}

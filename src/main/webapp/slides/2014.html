@@ -1,0 +1,416 @@
+<!DOCTYPE html><!--[if lt IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"></html><![endif]--><!--[if IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8"></html><![endif]--><!--[if IE 8]><html lang="en" class="no-js lt-ie9"></html><![endif]--><!--[if gt IE 8]><!-->
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/html"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AngularJS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=1024, user-scalable=no"><!-- Required stylesheets-->
+    <link rel="stylesheet" href="js/core/deck.core.css"><!-- Starter kit custom styles.-->
+    <link rel="stylesheet" href="css/slides.custom.css"><!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="js/extensions/notes/deck.notes.css">
+    <link rel="stylesheet" href="js/extensions/presenterview/deck.presenterview.css">
+    <link rel="stylesheet" href="js/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="js/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="js/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="js/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="js/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="js/extensions/scale/deck.scale.css"><!-- Style theme. More available in /themes/style/ or create your own.--><!--link(rel="stylesheet", href="themes/style/swiss.css")--><!-- Transition. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="js/themes/transition/horizontal-slide.css"><!-- Plugin: CodeMirror-->
+    <link rel="stylesheet" href="js/plugins/codemirror/deck.codemirror.css">
+    <link rel="stylesheet" href="js/plugins/codemirror/themes/elegant.css"><!-- Modernizr.-->
+    <link rel="stylesheet" href="css/bootstrap.css.min.css"><!-- Modernizr.-->
+    <script src="js/vendor/modernizr.custom.js"></script>
+    <style>
+        .popquiz{
+            color: #111;
+        }
+        .img_width{
+            width: 600px;
+        }
+    </style>
+</head>
+<body class="body">
+<div class="deck-container">
+
+<section id="a" class="slide">
+    <img class="img_width" src="./images/morningglory.JPG"/>
+    <div class="subtitle"><h4>AngularJS Promises - Sequenital Async</h4></div>
+</section>
+
+<section id="b" class="slide">
+    <h2>What's in store</h2>
+    <div class="figure">
+        <ul>
+            <li>Browser</li>
+            <li>AJAX</li>
+            <li>Promise</li>
+            <li>AngularJS</li>
+        </ul>
+
+        <div style="color: #888; position: absolute; bottom: 10px">
+            <div>Scott  @scottlsoward</div>
+            <div>Nils   @nilsrasmusson</div>
+            <div>http://ssoward.github.io/sort2014</div>
+        </div>
+    </div>
+</section>
+
+<section id="c" class="slide">
+    <!--
+    <ul>
+        <li>JavaScript engines only have a single thread</li>
+        <li>JavaScript can only ever execute one piece of code at a time</li>
+        <li>Tasks live on queue and are completed sequentially</li>
+        <li>Asynchronous events are put in a queue and wait for execution</li>
+    </ul>
+    -->
+
+    <h2>One Thread</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/rope.JPG"/>
+    </div>
+</section>
+
+<section id="d" class="slide">
+    <!--
+    <ul>
+        <li>Secrets of the JavaScript Ninja - John Resig</li>
+        <li>Browser event loop is single-threaded</li>
+        <li>Events are placed into the event queue</li>
+        <li>Events are handled in the order that its placed onto the queue</li>
+        <li>FIFO: first in first out</li>
+        <li>"Under no circumstances are two handlers executing simultaneously in separate threads"</li>
+    </ul>
+    -->
+
+    <h2>Event Loop</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/singleThread.png"/>
+    </div>
+</section>
+
+<section id="e" class="slide">
+    <!--
+    <ul>
+        <li>Callback function is also known as a callback pattern</li>
+        <li>Callback functions are derived from a programming paradigm called functional programming</li>
+        <li>Functional programming is the use of functions as arguments</li>
+        <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
+    </ul>
+    -->
+    <h2>Callbacks</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/callback.png"/>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="buttonClick()">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="f" class="slide">
+    <!--
+    <ul>
+        <li>AJAX = Asynchronous JavaScript and XML</li>
+    </ul>
+    -->
+    <h2>AJAX</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/callback2.png"/>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="g" class="slide">
+    <!--
+    <ul>
+        <li>You Ugly!</li>
+    </ul>
+    -->
+    <h2>AJAX</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/ajaxOldSchool.png"/>
+        <div id="ajaxDiv">Some Static data</div>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="loadXMLDoc('ajaxDiv')">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="i" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Nesting</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/ajaxNesting.png"/>
+    </div>
+</section>
+
+<section id="j" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Nesting</h2>
+    <div class="figure">
+        <!--<img class="img_width" src="./images/ajaxNesting.png"/>-->
+        <div id="nest1">div1</div>
+        <div id="nest2">div2</div>
+        <div id="nest3">div3</div>
+        <div id="nest4">div4</div>
+        <div id="nest5">div5</div>
+        <div id="nest6">div6</div>
+        <div id="nest7">div7</div>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="nestedMethod()">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="k" class="slide">
+    <!--
+    <ul>
+        <li>Angular</li>
+    </ul>
+    -->
+    <h2>Promises</h2>
+    <div class="figure">
+        A promise
+        represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.
+        <a class="img_width" href="http://promisesaplus.com/#point-2">Promises/A+</a>
+    </div>
+</section>
+
+<section id="l" class="slide">
+    <!--
+    <ul>
+        <li>Angular</li>
+    </ul>
+    -->
+    <h2>Terminology</h2>
+    <div class="figure">
+        <ul>
+            <li>“promise” is an object/function with a then method.</li>
+            <li>“thenable” is an object/function that defines a then method.</li>
+            <li>“value” is any legal JavaScript value (undefined, thenable, promise, etc).</li>
+            <li>“exception” is a value that is thrown using the throw statement.</li>
+            <li>“reason” is a value that indicates why a promise was rejected.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="m" class="slide">
+    <!--
+    <ul>
+        <li>Angular</li>
+    </ul>
+    -->
+    <h2>Three States</h2>
+    <div class="figure">
+        <ul>
+            <li>Pending: transition to either the fulfilled or rejected state</li>
+            <li>Fulfilled: must not transition to any other state.
+                must have a value, which must not change</li>
+            <li>Rejected: must not transition to any other state.
+                must have a reason, which must not change.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="n" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Promise</h2>
+    <div class="figure">
+        <img class="img_width" src="./images/promise.png"/>
+        <a class="btn btn-primary" onclick="promise()">Call me back</a>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- deck.navigation snippet-->
+<a target="_blank" href="#" title="Previous" class="deck-prev-link">&#8592;</a>
+<a target="_blank" href="#" title="Next" class="deck-next-link">&#8594;</a>
+<!-- deck.status snippet-->
+<p class="deck-status">
+    <span class="deck-status-current"></span>/<span class="deck-status-total"></span></p>
+<!-- deck.goto snippet-->
+<form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+</form>
+<!--deck.hash snippet-->
+<a target="_blank" href="." title="Permalink to this slide" class="deck-permalink">#</a>
+<img src="./images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
+</div>
+
+<!-- Required JS files.-->
+<script src="js/vendor/jquery-1.8.2.min.js"></script>
+<script src="js/vendor/coffee-script-1.4.0.min.js"></script>
+<script src="js/core/deck.core.js"></script>
+<!-- Plugin: CodeMirror (with CoffeeScript enhancements).-->
+<script src="js/plugins/codemirror/codemirror.js"></script>
+<script src="js/plugins/codemirror/mode/javascript/javascript.js"></script>
+<script src="js/plugins/codemirror/mode/coffeescript/coffeescript.js"></script>
+<script src="js/plugins/codemirror/deck.codemirror.js"></script>
+<!-- Extensiojs/n JS files. Add or remove as needed.-->
+<script src="js/extensions/hash/deck.hash.js"></script>
+<script src="js/extensions/menu/deck.menu.js"></script>
+<script src="js/extensions/goto/deck.goto.js"></script>
+<script src="js/extensions/status/deck.status.js"></script>
+<script src="js/extensions/navigation/deck.navigation.js"></script>
+<script src="js/extensions/scale/deck.scale.js"></script>
+<script src="js/extensions/clone/deck.clone.js"></script>
+<script src="js/extensions/presenterview/deck.presenterview.js"></script>
+<script src="js/extensions/hash/deck.hash.js"></script>
+<!--
+<script src="extensions/notes/deck.notes.js"></script>
+<script src="extensions/notes/deck.scottsNotes.js"></script>
+-->
+<!-- Initialize the deck.-->
+<script>$(function() {
+    $.deck('.slide', {
+        codemirror: {
+            lineNumbers: true,
+            theme: "elegant",
+            indentUnit: 2,
+            indentWithTabs: false,
+            runnable: false
+        }
+    });
+});
+</script>
+<script>
+    $(".popquiz").mouseover(function(){
+        $(this).css("color", "white");
+    });
+    $(".popquiz").mouseout(function(){
+        $(this).css("color", "#111");
+    });
+
+
+    // Callbacks
+
+    function buttonClick(){
+        console.log('hello, click event');
+        functionWhichTakesFunctionAsArgument(callback);
+    }
+
+    var callback = function(data){
+        console.log('callback time! '+data);
+    };
+
+    function functionWhichTakesFunctionAsArgument(callback){
+        console.log('first function execution');
+        //... do something
+        var response = Math.random();
+        callback(response);
+    };
+
+    // AJAX
+
+    function buttonClick2(){
+        console.log('hello, click event');
+        functionWhichTakesFunctionAsArgument2(callback);
+        console.log('No Blocking!!')
+    }
+
+    var callback2 = function(data){
+        console.log('callback time! '+data);
+    };
+
+    function functionWhichTakesFunctionAsArgument2(callback){
+        console.log('first function execution');
+        //... do something
+        setTimeout(function(){
+            var response = Math.random();
+            callback(response);
+        }, 3000);
+    };
+
+
+    function loadXMLDoc(someDiv, callback){
+        var xmlhttp;
+        if (window.XMLHttpRequest){
+            xmlhttp=new XMLHttpRequest();
+        }
+        else{
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function(){
+            if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById(someDiv).innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","/ajax/test?val="+someDiv,false);
+        xmlhttp.send();
+        if(callback) {
+            callback(null, xmlhttp.responseText);
+        }
+        return xmlhttp.responseText;
+    }
+
+    function nestedMethod(){
+        loadXMLDoc('nest1', function(result){
+            loadXMLDoc('nest2', function(result){
+                loadXMLDoc('nest3', function(result){
+                    loadXMLDoc('nest4', function(result){
+                        loadXMLDoc('nest5', function(result){
+                            loadXMLDoc('nest6', function(result){
+                                loadXMLDoc('nest7', function(result){
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    };
+
+    function loadXMLDocThen(someDiv){
+        var response = loadXMLDoc(someDiv);
+        return {
+            then: function(callback) {
+                if (callback) {
+                    callback(response);
+                }
+            }
+        };
+    }
+
+    function promise() {
+        var promise = loadXMLDocThen('nest1');
+
+        promise.then(function(res){
+            console.log(res);
+            return loadXMLDocThen('nest2');
+        });
+    }
+
+
+
+</script>
+</body>
+</html>
