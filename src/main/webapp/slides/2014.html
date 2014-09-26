@@ -26,7 +26,10 @@
             color: #111;
         }
         .img_width{
-            width: 600px;
+            /*width: 600px;*/
+        }
+        .figure{
+            height: 100%;
         }
     </style>
 </head>
@@ -34,8 +37,10 @@
 <div class="deck-container">
 
 <section id="a" class="slide">
-    <img class="img_width" src="./images/morningglory.JPG"/>
-    <div class="subtitle"><h4>AngularJS Promises - Sequenital Async</h4></div>
+    <div><h2>AngularJS Promises - Sequenital Async</h2></div>
+    <div class="figure" style="width: 60%; left: 20%; position: relative">
+        <img class="" src="images/morningglory.JPG"/>
+    </div>
 </section>
 
 <section id="b" class="slide">
@@ -68,7 +73,7 @@
 
     <h2>One Thread</h2>
     <div class="figure">
-        <img class="img_width" src="./images/rope.JPG"/>
+        <img style="width: 65%" src="images/rope.JPG"/>
     </div>
 </section>
 
@@ -86,7 +91,7 @@
 
     <h2>Event Loop</h2>
     <div class="figure">
-        <img class="img_width" src="./images/singleThread.png"/>
+        <img class="img_width" src="images/singleThread.png"/>
     </div>
 </section>
 
@@ -101,7 +106,7 @@
     -->
     <h2>Callbacks</h2>
     <div class="figure">
-        <img class="img_width" src="./images/callback.png"/>
+        <img class="img_width" src="images/callback.png"/>
         <ul class="list-inline text-right">
             <li><a class="btn btn-primary" onclick="buttonClick()">Call me back</a></li>
         </ul>
@@ -116,7 +121,7 @@
     -->
     <h2>AJAX</h2>
     <div class="figure">
-        <img class="img_width" src="./images/callback2.png"/>
+        <img class="img_width" src="images/callback2.png"/>
         <ul class="list-inline text-right">
             <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
         </ul>
@@ -131,7 +136,7 @@
     -->
     <h2>AJAX</h2>
     <div class="figure">
-        <img class="img_width" src="./images/ajaxOldSchool.png"/>
+        <img class="img_width" src="images/ajaxOldSchool.png"/>
         <div id="ajaxDiv">Some Static data</div>
         <ul class="list-inline text-right">
             <li><a class="btn btn-primary" onclick="loadXMLDoc('ajaxDiv')">Call me back</a></li>
@@ -147,7 +152,7 @@
     -->
     <h2>Nesting</h2>
     <div class="figure">
-        <img class="img_width" src="./images/ajaxNesting.png"/>
+        <img class="img_width" src="images/ajaxNesting.png"/>
     </div>
 </section>
 
@@ -231,8 +236,71 @@
     -->
     <h2>Promise</h2>
     <div class="figure">
-        <img class="img_width" src="./images/promise.png"/>
-        <a class="btn btn-primary" onclick="promise()">Call me back</a>
+        <img class="img_width" src="images/promise.png"/>
+        <div id="promiseDiv">Some Static data</div>
+        <ul class="list-inline text-right">
+            <li><a class="btn btn-primary" onclick="promise('promiseDiv')">Call me back</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="o" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>AngularJS</h2>
+    <div class="figure">
+        <!--<div ui-view autoscroll="false"></div>-->
+    </div>
+</section>
+
+<section id="p" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Chaining</h2>
+    <div class="figure">
+        <!--<div ui-view autoscroll="false"></div>-->
+    </div>
+</section>
+
+<section id="q" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>$q.defered</h2>
+    <div class="figure">
+        <!--<div ui-view autoscroll="false"></div>-->
+    </div>
+</section>
+
+<section id="r" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Router fetch data</h2>
+    <div class="figure">
+        <!--<div ui-view autoscroll="false"></div>-->
+    </div>
+</section>
+
+<section id="s" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2>Error try/catch</h2>
+    <div class="figure">
+        <!--<div ui-view autoscroll="false"></div>-->
     </div>
 </section>
 
@@ -255,15 +323,15 @@
 <p class="deck-status">
     <span class="deck-status-current"></span>/<span class="deck-status-total"></span></p>
 <!-- deck.goto snippet-->
-<form action="." method="get" class="goto-form">
+<form action="" method="get" class="goto-form">
     <label for="goto-slide">Go to slide:</label>
     <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
     <datalist id="goto-datalist"></datalist>
     <input type="submit" value="Go">
 </form>
 <!--deck.hash snippet-->
-<a target="_blank" href="." title="Permalink to this slide" class="deck-permalink">#</a>
-<img src="./images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
+<a target="_blank" href="" title="Permalink to this slide" class="deck-permalink">#</a>
+<img src="images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
 </div>
 
 <!-- Required JS files.-->
@@ -400,8 +468,8 @@
         };
     }
 
-    function promise() {
-        var promise = loadXMLDocThen('nest1');
+    function promise(val) {
+        var promise = loadXMLDocThen(val);
 
         promise.then(function(res){
             console.log(res);
@@ -412,5 +480,22 @@
 
 
 </script>
+
+
+<!-- APP SCRIPT -->
+<script src="../app/lib/angular/angular.js"></script>
+<script src="../app/lib/angular/angular-animate.js"></script>
+<script src="../app/lib/angular/angular-ui-router.js"></script>
+<script src="../app/lib/angular/angular-route.js"></script>
+<script src="../app/lib/angular/ui-bootstrap-tpls.js"></script>
+<script src="../app/js/app.js"></script>
+<script src="../app/js/SortAppRoute.js"></script>
+<script src="../app/js/services/HomeService.js"></script>
+<script src="../app/js/controllers/HomeController.js"></script>
+<script src="../app/js/controllers/AdminController.js"></script>
+
+<!-- APP SCRIPT -->
+
+
 </body>
 </html>
