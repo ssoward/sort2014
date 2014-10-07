@@ -33,7 +33,7 @@ public class SortController {
     public void oldSchoolAjax(HttpServletRequest request, HttpServletResponse response, @RequestParam String  val) {
         try {
             Thread.sleep(500l);
-            response.getWriter().print( val + " Returned from server at "+ new Date());
+            response.getWriter().print("Returned from server at "+ new Date());
         } catch (Exception e) {
             e.printStackTrace();
         }

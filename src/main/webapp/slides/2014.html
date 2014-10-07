@@ -106,6 +106,7 @@
     -->
     <h2>Callbacks</h2>
     <div class="figure">
+        <div style="float: left" id="e_ajaxDiv">...</div>
         <img class="img_width" src="images/callback.png"/>
         <ul class="list-inline text-right">
             <li><a class="btn btn-primary" onclick="buttonClick()">Call me back</a></li>
@@ -121,6 +122,7 @@
     -->
     <h2>AJAX</h2>
     <div class="figure">
+        <div style="float: left" id="f_ajaxDiv">...</div>
         <img class="img_width" src="images/callback2.png"/>
         <ul class="list-inline text-right">
             <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
@@ -244,27 +246,132 @@
     </div>
 </section>
 
-<section id="o" class="slide" ng-app="myApp">
+<section id="o1" class="slide" ng-app="myApp">
     <!--
     <ul>
         <li>When se</li>
     </ul>
     -->
-    <h2>AngularJS</h2>
+    <h2>AngularJS - $http</h2>
     <div class="figure">
-        <!--<div ui-view autoscroll="false"></div>-->
+        <ul class="">
+            <li>Facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object.</li>
+            <li>A function which takes a single argument — a configuration object — that is used to generate an HTTP request and returns a promise with two $http specific methods: success and error.</li>
+        </ul>
+    </div>
+    <img class="img_width" src="images/http.png"/>
+</section>
+
+<section id="o2" class="slide" ng-app="myApp">
+    <!--
+     <ul>
+          <li>1. Harness</li>
+          <li>2. Anchor Rope</li>
+          <li>3. Rope/Harness</li>
+          <li>4. Rappel On</li>
+          <li>APP</li>
+     </ul>
+     -->
+    <h2>Mountaineering</h2>
+    <div class="figure">
+        <img class="img_width" src="images/shrub.jpg"/>
+        <ul class="list-inline text-right">
+            <li>1. Harness</li>
+            <li>2. Anchor Rope</li>
+            <li>3. Rope/Harness</li>
+            <li>4. Rappel On</li>
+            <li><a target="_blank" href="../app">app</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="o" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>$http</li>
+  </ul>
+  -->
+    <h2>AngularJS - $http</h2>
+    <img class="img_width" src="images/canRappel.png"/>
+    <div class="figure">
+
+    </div>
+</section>
+
+<section id="os" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Move our $http call to a service.js</li>
+  </ul>
+  -->
+    <h2>AngularJS - $http</h2>
+    <img class="img_width" src="images/canRappelService.png"/>
+    <div class="figure">
+
+    </div>
+</section>
+
+<section id="ot" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Using the THEN method</li>
+  </ul>
+  -->
+    <h2>AngularJS - $http</h2>
+    <img class="img_width" src="images/canRappelThen.png"/>
+    <div class="figure">
+
+    </div>
+</section>
+
+<section id="oc" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Chaining 'then' methods</li>
+  </ul>
+  -->
+    <h2>AngularJS - $http</h2>
+    <img class="img_width" src="images/canRappelChainThen.png"/>
+    <div class="figure">
+
+    </div>
+</section>
+
+<section id="ote" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Chaining with Error handling</li>
+  </ul>
+  -->
+    <h2>AngularJS - $http</h2>
+    <img class="img_width" src="images/canRappelChainError.png"/>
+    <div class="figure">
+
+    </div>
+</section>
+
+<section id="otr" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Chaining with Try/Catch</li>
+  </ul>
+  -->
+    <h2>AngularJS - $http</h2>
+    <img class="img_width" src="images/canRappelChainTry.png"/>
+    <div class="figure">
+
     </div>
 </section>
 
 <section id="p" class="slide" ng-app="myApp">
     <!--
     <ul>
-        <li>When se</li>
+        <li>Chaining then simplified with error handling in the service class</li>
     </ul>
     -->
     <h2>Chaining</h2>
+    <img class="img_width" src="images/canRappelChaining.png"/>
     <div class="figure">
-        <!--<div ui-view autoscroll="false"></div>-->
     </div>
 </section>
 
@@ -274,9 +381,35 @@
         <li>When se</li>
     </ul>
     -->
-    <h2>$q.defered</h2>
+    <h2>$q</h2>
     <div class="figure">
-        <!--<div ui-view autoscroll="false"></div>-->
+        A promise/deferred implementation inspired by <a href="https://github.com/kriskowal/q">Kris Kowal's Q</a>.
+
+    </div>
+</section>
+
+
+<section id="qp" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>$q deferred.</li>
+    </ul>
+    -->
+    <h2>$q</h2>
+    <img class="img_width" src="images/canRappelQ.png"/>
+    <div class="figure">
+    </div>
+</section>
+
+<section id="qa" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>$q.all(...) we can all multiple promises to $q and run them.</li>
+    </ul>
+    -->
+    <h2>$q.all()</h2>
+    <img class="img_width" src="images/canRappelQAll.png"/>
+    <div class="figure">
     </div>
 </section>
 
@@ -286,7 +419,7 @@
         <li>When se</li>
     </ul>
     -->
-    <h2>Router fetch data</h2>
+    <h2></h2>
     <div class="figure">
         <!--<div ui-view autoscroll="false"></div>-->
     </div>
@@ -298,7 +431,7 @@
         <li>When se</li>
     </ul>
     -->
-    <h2>Error try/catch</h2>
+    <h2></h2>
     <div class="figure">
         <!--<div ui-view autoscroll="false"></div>-->
     </div>
@@ -378,43 +511,54 @@
         $(this).css("color", "#111");
     });
 
+    function consoleLogAdd(divVal, log){
+        var ele = document.getElementById(divVal);
+        var currVal = ele.innerHTML;
+        ele.innerHTML = currVal + log+'</br>';
+    }
+
+    function consoleLog(divVal, log){
+        var ele = document.getElementById(divVal);
+        ele.innerHTML = log+'</br>';
+    }
+
 
     // Callbacks
 
     function buttonClick(){
-        console.log('hello, click event');
+        consoleLog('e_ajaxDiv', 'Click event');
         functionWhichTakesFunctionAsArgument(callback);
     }
 
     var callback = function(data){
-        console.log('callback time! '+data);
+        consoleLogAdd('e_ajaxDiv', 'callback time! '+data);
     };
 
-    function functionWhichTakesFunctionAsArgument(callback){
-        console.log('first function execution');
+    function functionWhichTakesFunctionAsArgument(someCallbackMethod){
+        consoleLogAdd('e_ajaxDiv', 'first function execution');
         //... do something
         var response = Math.random();
-        callback(response);
-    };
+        someCallbackMethod(response);
+    }
 
     // AJAX
 
     function buttonClick2(){
-        console.log('hello, click event');
-        functionWhichTakesFunctionAsArgument2(callback);
-        console.log('No Blocking!!')
+        consoleLog('f_ajaxDiv', 'Click event');
+        functionWhichTakesFunctionAsArgument2(callback2);
+        consoleLogAdd('f_ajaxDiv', 'No Blocking!!')
     }
 
     var callback2 = function(data){
-        console.log('callback time! '+data);
+        consoleLogAdd('f_ajaxDiv', 'callback time! '+data);
     };
 
-    function functionWhichTakesFunctionAsArgument2(callback){
-        console.log('first function execution');
+    function functionWhichTakesFunctionAsArgument2(someCallbackMethod){
+        consoleLogAdd('f_ajaxDiv', 'first function execution');
         //... do something
         setTimeout(function(){
             var response = Math.random();
-            callback(response);
+            someCallbackMethod(response);
         }, 3000);
     };
 
@@ -472,7 +616,6 @@
         var promise = loadXMLDocThen(val);
 
         promise.then(function(res){
-            console.log(res);
             return loadXMLDocThen('nest2');
         });
     }
