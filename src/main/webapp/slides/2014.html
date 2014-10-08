@@ -120,7 +120,7 @@
                         }
 
                         var callback = function(data){
-                        console.log(&#x27;callback time! &#x27;+data);asdfadsfsadfadf
+                        console.log(&#x27;callback time! &#x27;+data);
                         };
 
                         function functionWhichTakesFunctionAsArgument(callback){
@@ -159,22 +159,22 @@
                 <pre>
                     <code>
                         function buttonClick2(){
-                        consoleLog(&#x27;f_ajaxDiv&#x27;, &#x27;Click event&#x27;);
-                        functionWhithTakesFunctionAsArgument2(callback2);
-                        consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;No Blocking!!&#x27;)
+                          consoleLog(&#x27;f_ajaxDiv&#x27;, &#x27;Click event&#x27;);
+                          functionWhithTakesFunctionAsArgument2(callback2);
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;No Blocking!!&#x27;)
                         }
 
                         var callback2 = function(data){
-                        consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;callback time! &#x27;+data);
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;callback time! &#x27;+data);
                         };
 
                         function functionWhichTakesFunctionAsArgument2(someCallbackMethod){
-                        consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;first function execution&#x27;);
-                        //... do something
-                        setTimeout(function(){
-                        var response = Math.random();
-                        someCallbackMethod(response);
-                        }, 3000);
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;first function execution&#x27;);
+                          //... do something
+                          setTimeout(function(){
+                            var response = Math.random();
+                            someCallbackMethod(response);
+                          }, 3000);
                         };
                     </code>
                 </pre>
@@ -183,10 +183,10 @@
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
             <div class="figure">
                 <div style="float: left" id="f_ajaxDiv">...</div>
-                <!--                 <img class="img_width" src="images/callback2.png"/>
-                 -->                <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
-            </ul>
+<!--                 <img class="img_width" src="images/callback2.png"/>
+ -->                <ul class="list-inline text-right">
+                    <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+                </ul>
             </div>
         </div>
     </section>
