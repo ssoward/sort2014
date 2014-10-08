@@ -41,6 +41,14 @@
 </section>
 
 <section id="b" class="slide">
+    <!--
+  <ul>
+       <li>Browser</li>
+       <li>AJAX</li>
+       <li>Promise</li>
+       <li>AngularJS</li>
+  </ul>
+  -->
     <h2>What's in store</h2>
     <div class="col-md-10 col-md-offset-1">
         <ul>
@@ -107,19 +115,19 @@
                 <pre>
                     <code>
                         function buttonClick(){
-                          console.log(&#x27;hello, click event&#x27;);
-                          functionWhichTakesFunctionAsArgument(callback);
+                        console.log(&#x27;hello, click event&#x27;);
+                        functionWhichTakesFunctionAsArgument(callback);
                         }
 
                         var callback = function(data){
-                          console.log(&#x27;callback time! &#x27;+data);
+                        console.log(&#x27;callback time! &#x27;+data);asdfadsfsadfadf
                         };
 
                         function functionWhichTakesFunctionAsArgument(callback){
-                          console.log(&#x27;first function execution&#x27;);
-                          //... do something
-                          var response = Math.random();
-                          callback(response);
+                        console.log(&#x27;first function execution&#x27;);
+                        //... do something
+                        var response = Math.random();
+                        callback(response);
                         };
                     </code>
                 </pre>
@@ -141,6 +149,7 @@
     <!--
     <ul>
         <li>AJAX = Asynchronous JavaScript and XML</li>
+        <li>AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.</li>
     </ul>
     -->
     <h2>AJAX</h2>
@@ -150,22 +159,22 @@
                 <pre>
                     <code>
                         function buttonClick2(){
-                          consoleLog(&#x27;f_ajaxDiv&#x27;, &#x27;Click event&#x27;);
-                          functionWhithTakesFunctionAsArgument2(callback2);
-                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;No Blocking!!&#x27;)
+                        consoleLog(&#x27;f_ajaxDiv&#x27;, &#x27;Click event&#x27;);
+                        functionWhithTakesFunctionAsArgument2(callback2);
+                        consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;No Blocking!!&#x27;)
                         }
 
                         var callback2 = function(data){
-                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;callback time! &#x27;+data);
+                        consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;callback time! &#x27;+data);
                         };
 
                         function functionWhichTakesFunctionAsArgument2(someCallbackMethod){
-                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;first function execution&#x27;);
-                          //... do something
-                          setTimeout(function(){
-                            var response = Math.random();
-                            someCallbackMethod(response);
-                          }, 3000);
+                        consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;first function execution&#x27;);
+                        //... do something
+                        setTimeout(function(){
+                        var response = Math.random();
+                        someCallbackMethod(response);
+                        }, 3000);
                         };
                     </code>
                 </pre>
@@ -174,10 +183,10 @@
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
             <div class="figure">
                 <div style="float: left" id="f_ajaxDiv">...</div>
-<!--                 <img class="img_width" src="images/callback2.png"/>
- -->                <ul class="list-inline text-right">
-                    <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
-                </ul>
+                <!--                 <img class="img_width" src="images/callback2.png"/>
+                 -->                <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+            </ul>
             </div>
         </div>
     </section>
@@ -236,14 +245,22 @@
 <section id="k" class="slide">
     <!--
     <ul>
-        <li>Angular</li>
+        <li>The primary way of interacting with a promise is through its THEN method</li>
+        <li>THEN registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.</li>
     </ul>
     -->
     <h2>Promises</h2>
     <div class="figure">
         A promise
-        represents the eventual result of an asynchronous operation. The primary way of interacting with a promise is through its then method, which registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.
         <a class="img_width" href="http://promisesaplus.com/#point-2">Promises/A+</a>
+        represents the eventual result of an asynchronous operation.
+        <div class="figure">
+            <img class="img_width" src="images/promise.png"/>
+            <div id="promiseDiv">Some Static data</div>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="promise('promiseDiv')">Call me back</a></li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -268,7 +285,16 @@
 <section id="m" class="slide">
     <!--
     <ul>
-        <li>Angular</li>
+<li>A promise must be in one of three states:
+<br/>pending, fulfilled, or rejected.
+<li><p>When pending, a promise:
+may transition to either the fulfilled or rejected state.</li>
+<li><p>When fulfilled, a promise:
+<br/>must not transition to any other state.
+<br/>must have a value, which must not change.</li>
+<li><p>When rejected, a promise:
+<br/>must not transition to any other state.
+<br/>must have a reason, which must not change.</li>
     </ul>
     -->
     <h2>Three States</h2>
@@ -283,33 +309,35 @@
     </div>
 </section>
 
-<section id="n" class="slide">
-    <!--
-    <ul>
-        <li>When se</li>
-    </ul>
-    -->
-    <h2>Promise</h2>
-    <div class="figure">
-        <img class="img_width" src="images/promise.png"/>
-        <div id="promiseDiv">Some Static data</div>
-        <ul class="list-inline text-right">
-            <li><a class="btn btn-primary" onclick="promise('promiseDiv')">Call me back</a></li>
-        </ul>
-    </div>
-</section>
+<!--<section id="n" class="slide">-->
+    <!--&lt;!&ndash;-->
+    <!--<ul>-->
+        <!--<li>When se</li>-->
+    <!--</ul>-->
+    <!--&ndash;&gt;-->
+    <!--<h2>Promise</h2>-->
+    <!--<div class="figure">-->
+        <!--<img class="img_width" src="images/promise.png"/>-->
+        <!--<div id="promiseDiv">Some Static data</div>-->
+        <!--<ul class="list-inline text-right">-->
+            <!--<li><a class="btn btn-primary" onclick="promise('promiseDiv')">Call me back</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</section>-->
 
 <section id="o1" class="slide" ng-app="myApp">
     <!--
     <ul>
-        <li>When se</li>
+         <li>http Facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object.</li>
+         <li><p>A function which takes a single argument — a configuration object —
+         <br/>that is used to generate an HTTP request and returns a promise with two $http specific methods: success and error.</li>
+         <li><p>Since the returned value of calling the $http function is a promise, you can also use the then method to register callbacks</li>
     </ul>
     -->
     <h2>AngularJS - $http</h2>
     <div class="figure">
         <ul class="">
-            <li>Facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object.</li>
-            <li>A function which takes a single argument — a configuration object — that is used to generate an HTTP request and returns a promise with two $http specific methods: success and error.</li>
+
         </ul>
     </div>
     <img class="img_width" src="images/http.png"/>
@@ -368,6 +396,8 @@
     <!--
   <ul>
       <li>Using the THEN method</li>
+      <li><p>Since the returned value of calling the $http function is a promise, you can also use the then method to register callbacks</li>
+      <li><p>These callbacks will receive a single argument – an object representing the response. </li>
   </ul>
   -->
     <h2>AngularJS - $http</h2>
@@ -669,7 +699,7 @@
         var promise = loadXMLDocThen(val);
 
         promise.then(function(res){
-            return loadXMLDocThen('nest2');
+            console.log(res);
         });
     }
 
