@@ -5,6 +5,7 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
+  font-family: Raleway, sans-serif;
 }
 
 body.deck-container {
@@ -29,6 +30,7 @@ body.deck-container {
   font-size: 16px;
   line-height: 1.25;
   overflow: hidden;
+  font-family: Raleway, sans-serif;
   /* Resets and base styles from HTML5 Boilerplate */
   /* End HTML5 Boilerplate adaptations */
 }
@@ -48,6 +50,7 @@ body.deck-container {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: Raleway, sans-serif;
   vertical-align: baseline;
 }
 .deck-container article, .deck-container aside, .deck-container details, .deck-container figcaption, .deck-container figure,
@@ -182,10 +185,16 @@ body.deck-container {
   color: #444;
 }
 .deck-container a {
-  color: #607890;
+  color: #43b2e5;
+}
+.deck-container a.btn-primary {
+  color: #fff;
+  background-color: #888;
+  border: none;
 }
 .deck-container a:hover, .deck-container a:focus {
-  color: #036;
+  color: #fff;
+  text-decoration: none;
 }
 .deck-container a:link {
   -webkit-tap-highlight-color: #fff;
@@ -240,10 +249,13 @@ body.deck-container {
   color: #fff;
 }
 .slide h2 span { 
-  font-size: 75px;
+  font-size: 55px;
   display: block;
   opacity: 0.8;
   font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  margin-top: 0.2em;
+  margin-left: 2.3em;
 }
 .slide h3 {
   font-size: 1.4375em;
@@ -439,12 +451,17 @@ body.deck-container {
 iframe {
   max-width: 1000px;
 }
+.slide h2 img {
+  float: left;
+  margin-bottom: 0;
+  margin-right: .5em;
+  max-width: 100px;
+}
 
 #a {
   background: url('../../images/morningglory.JPG') center center repeat #000;
 }
 #a h2 {
-  color: #fff;
   position: absolute;
   top: 15%;
   font-size: 100px;
@@ -455,25 +472,62 @@ iframe {
   margin-top: .1em;
   margin-bottom: 0;
 }
-#b {
-  background: #0e0e0e; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #0e0e0e 0%, #7d7e7d 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0e0e0e), color-stop(100%,#7d7e7d)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg,  #0e0e0e 0%,#7d7e7d 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg,  #0e0e0e 0%,#7d7e7d 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg,  #0e0e0e 0%,#7d7e7d 100%); /* IE10+ */
-  background: linear-gradient(135deg,  #0e0e0e 0%,#7d7e7d 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.deck-container {
+  background: #05093f; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #05093f 0%, #602a2b 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#05093f), color-stop(100%,#602a2b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #05093f 0%,#602a2b 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #05093f 0%,#602a2b 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #05093f 0%,#602a2b 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #05093f 0%,#602a2b 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05093f', endColorstr='#602a2b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.deck-container ul.boxSet {
+  margin: 3em 0 0;
+  padding: 0;
+}
+.boxSet li {
+  border-radius: 10px;
+  background: rgba(255,255,255,.2);
+  min-height: 10em;
+  text-align: center;
+  list-style: none;
+  border: 3px solid #000;
+  font-family: Raleway, sans-serif;
+}
+.boxSet li:after {
+  font-family: Roboto Slab,sans-serif;
+  font-size: 1.8em;
+  text-align: center;
+  letter-spacing: -9px;
+  position: absolute;
+  top: 3.9em;
+  left: 50%;
+  margin-left: -52%;
+  opacity: 0.1;
+  width: 100%;
+}
+.boxSet li:first-child:after {
+  content: 'BROWSER';
+}
+.boxSet li:nth-child(2):after {
+  content: 'AJAX';
+}
+.boxSet li:nth-child(3):after {
+  content: 'PROMISE';
+}
+.boxSet li:last-child:after {
+  content: 'ANGULARJS';
+}
+.boxSet li img {
+  margin-top: 2em;
 }
 #c {
   background: url('../../images/rope.JPG') center center repeat #000;
 }
-#c h2 {
-  color: white;
-}
 #o2 {
   background: url('../../images/shrub.JPG') center center repeat #000;
 }
-#o2 h2 {
-  color: white;
+.explanation li strong {
+  text-transform: uppercase;
 }
