@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
 html, body {
   height: 100%;
   padding: 0;
@@ -7,6 +10,15 @@ html, body {
 body.deck-container {
   overflow-y: auto;
   position: static;
+}
+
+.shield {
+  background: url("../../images/AngularJS-Shield-small.png") right top no-repeat transparent;
+  position: absolute;
+  top: 5px;
+  right: 45px;
+  width: 98px;
+  height: 103px;
 }
 
 .deck-container {
@@ -30,17 +42,9 @@ body.deck-container {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
 }
-.deck-container div, .deck-container span, .deck-container object, .deck-container iframe,
-.deck-container h1, .deck-container h2, .deck-container h3, .deck-container h4, .deck-container h5, .deck-container h6, .deck-container p, .deck-container blockquote, .deck-container pre,
-.deck-container abbr, .deck-container address, .deck-container cite, .deck-container code, .deck-container del, .deck-container dfn, .deck-container em, .deck-container img, .deck-container ins, .deck-container kbd, .deck-container q, .deck-container samp,
-.deck-container small, .deck-container strong, .deck-container sub, .deck-container sup, .deck-container var, .deck-container b, .deck-container i, .deck-container dl, .deck-container dt, .deck-container dd, .deck-container ol, .deck-container ul, .deck-container li,
-.deck-container fieldset, .deck-container form, .deck-container label, .deck-container legend,
-.deck-container table, .deck-container caption, .deck-container tbody, .deck-container tfoot, .deck-container thead, .deck-container tr, .deck-container th, .deck-container td,
-.deck-container article, .deck-container aside, .deck-container canvas, .deck-container details, .deck-container figcaption, .deck-container figure,
-.deck-container footer, .deck-container header, .deck-container hgroup, .deck-container menu, .deck-container nav, .deck-container section, .deck-container summary,
-.deck-container time, .deck-container mark, .deck-container audio, .deck-container video {
-  margin: 0;
-  padding: 0;
+.deck-container div, .deck-container span, .deck-container object, .deck-container iframe, .deck-container h1, .deck-container h2, .deck-container h3, .deck-container h4, .deck-container h5, .deck-container h6, .deck-container p, .deck-container blockquote, .deck-container pre, .deck-container abbr, .deck-container address, .deck-container cite, .deck-container code, .deck-container del, .deck-container dfn, .deck-container em, .deck-container img, .deck-container ins, .deck-container kbd, .deck-container q, .deck-container samp, .deck-container small, .deck-container strong, .deck-container sub, .deck-container sup, .deck-container var, .deck-container b, .deck-container i, .deck-container dl, .deck-container dt, .deck-container dd, .deck-container ol, .deck-container ul, .deck-container li, .deck-container fieldset, .deck-container form, .deck-container label, .deck-container legend, .deck-container table, .deck-container caption, .deck-container tbody, .deck-container tfoot, .deck-container thead, .deck-container tr, .deck-container th, .deck-container td, .deck-container article, .deck-container aside, .deck-container canvas, .deck-container details, .deck-container figcaption, .deck-container figure, .deck-container footer, .deck-container header, .deck-container hgroup, .deck-container menu, .deck-container nav, .deck-container section, .deck-container summary, .deck-container time, .deck-container mark, .deck-container audio, .deck-container video {
+/*  margin: 0;
+*/  padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
@@ -231,7 +235,15 @@ body.deck-container {
   font-weight: bold;
   padding-top: .5em;
   margin: 0 0 .66666em 0;
-  border-bottom: 3px solid #888;
+  border-bottom: 3px solid rgba(255,255,255,.5);
+  font-family: Roboto Slab, sans-serif;
+  color: #fff;
+}
+.slide h2 span { 
+  font-size: 75px;
+  display: block;
+  opacity: 0.8;
+  font-family: Raleway, sans-serif;
 }
 .slide h3 {
   font-size: 1.4375em;
@@ -404,4 +416,64 @@ body.deck-container {
   script {
     display: none;
   }
+}
+
+/* Nils Additions */
+.presenters {
+  color: #888; 
+  position: absolute; 
+  bottom: 10px;
+}
+
+.deck-container .slide .presenters p {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway,sans-serif;
+}
+
+.presenters span.twitterHandle {
+  background: url("../../images/twitter.png") left 6px no-repeat;
+  padding-left: 1.2em;
+  margin-left: .5em;
+}
+iframe {
+  max-width: 1000px;
+}
+
+#a {
+  background: url('../../images/morningglory.JPG') center center repeat #000;
+}
+#a h2 {
+  color: #fff;
+  position: absolute;
+  top: 15%;
+  font-size: 100px;
+  border-bottom: none;
+}
+#a h2 img {
+  float: left; margin-right: 0.3em;
+  margin-top: .1em;
+  margin-bottom: 0;
+}
+#b {
+  background: #0e0e0e; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #0e0e0e 0%, #7d7e7d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0e0e0e), color-stop(100%,#7d7e7d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #0e0e0e 0%,#7d7e7d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #0e0e0e 0%,#7d7e7d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #0e0e0e 0%,#7d7e7d 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #0e0e0e 0%,#7d7e7d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#c {
+  background: url('../../images/rope.JPG') center center repeat #000;
+}
+#c h2 {
+  color: white;
+}
+#o2 {
+  background: url('../../images/shrub.JPG') center center repeat #000;
+}
+#o2 h2 {
+  color: white;
 }

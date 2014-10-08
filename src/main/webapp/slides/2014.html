@@ -37,28 +37,25 @@
 <div class="deck-container">
 
 <section id="a" class="slide">
-    <div><h2>AngularJS Promises - Sequential Async</h2></div>
-    <div class="figure" style="width: 60%; left: 20%; position: relative">
-        <img class="" src="images/morningglory.JPG"/>
-    </div>
+    <h2><img src="images/AngularJS-Shield-small.png" alt="Angular Shield" />AngularJS Promises <span>Sequential Async</span></h2>
 </section>
 
 <section id="b" class="slide">
     <h2>What's in store</h2>
-    <div class="figure">
+    <div class="col-md-10 col-md-offset-1">
         <ul>
             <li>Browser</li>
             <li>AJAX</li>
             <li>Promise</li>
             <li>AngularJS</li>
         </ul>
-
-        <div style="color: #888; position: absolute; bottom: 10px">
-            <div>Scott  @scottlsoward</div>
-            <div>Nils   @nilsrasmusson</div>
-            <div>http://ssoward.github.io/sort2014</div>
-        </div>
     </div>
+    <div class="presenters">
+        <p>Scott <span class="twitterHandle">@scottlsoward</p>
+        <p>Nils <span class="twitterHandle">@nilsynils</p>
+        <p>http://ssoward.github.io/sort2014</p>
+    </div>
+    <div class="shield"></div>
 </section>
 
 <section id="c" class="slide">
@@ -72,9 +69,7 @@
     -->
 
     <h2>One Thread</h2>
-    <div class="figure">
-        <img style="width: 65%" src="images/rope.JPG"/>
-    </div>
+    <div class="shield"></div>
 </section>
 
 <section id="d" class="slide">
@@ -90,9 +85,10 @@
     -->
 
     <h2>Event Loop</h2>
-    <div class="figure">
-        <img class="img_width" src="images/singleThread.png"/>
-    </div>
+    <section class="col-md-10 col-md-offset-1">
+        <img src="images/browser-event-loop.svg" alt="Browser Event Loop" style="height: 60%;" />
+        <!-- <img class="img_width" src="images/singleThread.png"/> -->
+    </section>
 </section>
 
 <section id="e" class="slide">
@@ -105,13 +101,40 @@
     </ul>
     -->
     <h2>Callbacks</h2>
-    <div class="figure">
-        <div style="float: left" id="e_ajaxDiv">...</div>
-        <img class="img_width" src="images/callback.png"/>
-        <ul class="list-inline text-right">
-            <li><a class="btn btn-primary" onclick="buttonClick()">Call me back</a></li>
-        </ul>
-    </div>
+    <section>
+        <div class="col-md-10 col-md-offset-1">
+            <div data-height="479" data-theme-id="9061" data-slug-hash="GmcvK" data-default-tab="js" data-user="nilsynils" class='codepen'>
+                <pre>
+                    <code>
+                        function buttonClick(){
+                          console.log(&#x27;hello, click event&#x27;);
+                          functionWhichTakesFunctionAsArgument(callback);
+                        }
+
+                        var callback = function(data){
+                          console.log(&#x27;callback time! &#x27;+data);
+                        };
+
+                        function functionWhichTakesFunctionAsArgument(callback){
+                          console.log(&#x27;first function execution&#x27;);
+                          //... do something
+                          var response = Math.random();
+                          callback(response);
+                        };
+                    </code>
+                </pre>
+                <p>See the Pen <a href='http://codepen.io/nilsynils/pen/GmcvK/'>GmcvK</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+            <div style="float: left" id="e_ajaxDiv">...</div>
+            <!-- <img class="img_width" src="images/callback.png"/> -->
+            <ul class="list-inline text-right">
+                <li>
+                    <a class="btn btn-primary" onclick="buttonClick()">Call me back</a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </section>
 
 <section id="f" class="slide">
@@ -121,13 +144,43 @@
     </ul>
     -->
     <h2>AJAX</h2>
-    <div class="figure">
-        <div style="float: left" id="f_ajaxDiv">...</div>
-        <img class="img_width" src="images/callback2.png"/>
-        <ul class="list-inline text-right">
-            <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
-        </ul>
-    </div>
+    <section>
+        <div class="col-md-10 col-md-offset-1">
+            <div data-height="450" data-theme-id="9061" data-slug-hash="DFBkp" data-default-tab="js" data-user="nilsynils" class='codepen'>
+                <pre>
+                    <code>
+                        function buttonClick2(){
+                          consoleLog(&#x27;f_ajaxDiv&#x27;, &#x27;Click event&#x27;);
+                          functionWhithTakesFunctionAsArgument2(callback2);
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;No Blocking!!&#x27;)
+                        }
+
+                        var callback2 = function(data){
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;callback time! &#x27;+data);
+                        };
+
+                        function functionWhichTakesFunctionAsArgument2(someCallbackMethod){
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;first function execution&#x27;);
+                          //... do something
+                          setTimeout(function(){
+                            var response = Math.random();
+                            someCallbackMethod(response);
+                          }, 3000);
+                        };
+                    </code>
+                </pre>
+                <p>See the Pen <a href='http://codepen.io/nilsynils/pen/DFBkp/'>DFBkp</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>
+            <div class="figure">
+                <div style="float: left" id="f_ajaxDiv">...</div>
+<!--                 <img class="img_width" src="images/callback2.png"/>
+ -->                <ul class="list-inline text-right">
+                    <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </section>
 
 <section id="g" class="slide">
@@ -274,15 +327,15 @@
      -->
     <h2>Mountaineering</h2>
     <div class="figure">
-        <img class="img_width" src="images/shrub.jpg"/>
-        <ul class="list-inline text-right">
-            <li>1. Harness</li>
-            <li>2. Anchor Rope</li>
-            <li>3. Rope/Harness</li>
-            <li>4. Rappel On</li>
-            <li><a target="_blank" href="../app">app</a></li>
-        </ul>
+        <ol>
+            <li>Harness</li>
+            <li>Anchor Rope</li>
+            <li>Rope/Harness</li>
+            <li>Rappel On</li>
+            <li><a target="_blank" href="../app">App</a></li>
+        </ol>
     </div>
+    <div class="shield"></div>
 </section>
 
 <section id="o" class="slide" ng-app="myApp">
@@ -464,7 +517,7 @@
 </form>
 <!--deck.hash snippet-->
 <a target="_blank" href="" title="Permalink to this slide" class="deck-permalink">#</a>
-<img src="images/AngularJS-Shield-small.png" style="color: #888; float:right"/>
+<div class="shield"></div>
 </div>
 
 <!-- Required JS files.-->
