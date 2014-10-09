@@ -531,6 +531,9 @@ iframe {
 #r {
   background: url('../../images/tierdrop.jpg') center center repeat #000;
 }
+#s {
+  background: url('../../images/zguitdork.jpg') center center repeat #000;
+}
 .explanation li strong {
   text-transform: uppercase;
 }
