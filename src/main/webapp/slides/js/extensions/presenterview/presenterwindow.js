@@ -24,9 +24,9 @@ function update() {
     note.innerHTML      = 'NOTES:<br/>'+localStorage.getItem('notes');
 
     var currInner           = 'CURRENT:<br/>'+localStorage.getItem('curr_slide');
-    currInner = currInner.replace("<img", "IMG");
+    currInner = currInner.replace(/\n|<img.*?>/g,'');
     curr.innerHTML      = currInner;
     var nextInner       = 'NEXT:<br/>'+localStorage.getItem('next_slide');
-    nextInner = nextInner.replace("<img", "IMG");
+    nextInner = nextInner.replace(/\n|<img.*?>/g,'');
     next.innerHTML      = nextInner;
 }
