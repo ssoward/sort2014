@@ -9,8 +9,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'partials/rappel.html',
             controller: 'RopeController'
         })
-
-
+        .state('qqqq', {
+            url: '/qqqq',
+            templateUrl: 'partials/q.html',
+            controller: 'RopeController'
+        })
 
 //        .state('view1', {
 //            url: '/view1',

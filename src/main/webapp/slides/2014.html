@@ -37,533 +37,561 @@
 <body class="body">
 <div class="deck-container">
 
-    <section id="a" class="slide">
-        <h2><img src="images/AngularJS-Shield-small.png" alt="Angular Shield" />AngularJS Promises <span>Sequential Async</span></h2>
-    </section>
+<section id="a" class="slide">
+    <h2><img src="images/AngularJS-Shield-small.png" alt="Angular Shield" />AngularJS Promises <span>Sequential Async</span></h2>
+</section>
 
-    <section id="b" class="slide">
-        <h2>What's in store</h2>
+<section id="b" class="slide">
+    <h2>What's in store</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <ul class="boxSet row">
+            <li class="col-md-3">Browser<br /><img src="images/browser.png" alt="browser"></li>
+            <li class="col-md-3">AJAX<br /><img src="images/ajax.png" alt="ajax"></li>
+            <li class="col-md-3">Promise<br /><img src="images/promises.png" alt="promises"></li>
+            <li class="col-md-3">AngularJS<br /><img src="images/AngularJS-Shield-small.png" alt="angularJS"></li>
+        </ul>
+    </div>
+    <div class="presenters">
+        <p>Scott <span class="twitterHandle">@scottlsoward</p>
+        <p>Nils <span class="twitterHandle">@nilsynils</p>
+        <p>http://ssoward.github.io/sort2014</p>
+    </div>
+    <div class="shield"></div>
+</section>
+
+<section id="c" class="slide">
+    <!--
+    <ul>
+        <li>JavaScript engines only have a single thread</li>
+        <li>JavaScript can only ever execute one piece of code at a time</li>
+        <li>Tasks live on queue and are completed sequentially</li>
+        <li>Asynchronous events are put in a queue and wait for execution</li>
+    </ul>
+    -->
+
+    <h2><img src="images/browser.png" alt="browser">One Thread</h2>
+    <div class="shield"></div>
+</section>
+
+<section id="d" class="slide">
+    <!--
+    <ul>
+        <li>Secrets of the JavaScript Ninja - John Resig</li>
+        <li>Browser event loop is single-threaded</li>
+        <li>Events are placed into the event queue</li>
+        <li>Events are handled in the order that its placed onto the queue</li>
+        <li>FIFO: first in first out</li>
+        <li>"Under no circumstances are two handlers executing simultaneously in separate threads"</li>
+    </ul>
+    -->
+
+    <h2><img src="images/browser.png" alt="browser">Event Loop</h2>
+    <section class="col-md-6 col-md-offset-3">
+        <img src="images/browser-event-loop.svg" alt="Browser Event Loop" style="height: 60%;" />
+        <!-- <img class="img_width" src="images/singleThread.png"/> -->
+    </section>
+</section>
+
+<section id="e" class="slide">
+    <!--
+    <ul>
+        <li>Callback function is also known as a callback pattern</li>
+        <li>Callback functions are derived from a programming paradigm called functional programming</li>
+        <li>Functional programming is the use of functions as arguments</li>
+        <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
+    </ul>
+    -->
+    <h2><img src="images/browser.png" alt="browser">Callbacks</h2>
+    <section>
         <div class="col-md-10 col-md-offset-1">
-            <ul class="boxSet row">
-                <li class="col-md-3">Browser<br /><img src="images/browser.png" alt="browser"></li>
-                <li class="col-md-3">AJAX<br /><img src="images/ajax.png" alt="ajax"></li>
-                <li class="col-md-3">Promise<br /><img src="images/promises.png" alt="promises"></li>
-                <li class="col-md-3">AngularJS<br /><img src="images/AngularJS-Shield-small.png" alt="angularJS"></li>
+            <!--<div data-height="479" data-theme-id="9061" data-slug-hash="GmcvK" data-default-tab="js" data-user="nilsynils" class='codepen'>
+                <pre>
+                    <code>
+                        function buttonClick(){
+                          console.log(&#x27;hello, click event&#x27;);
+                          functionWhichTakesFunctionAsArgument(callback);
+                        }
+
+                        var callback = function(data){
+                          console.log(&#x27;callback time! &#x27;+data);
+                        };
+
+                        function functionWhichTakesFunctionAsArgument(callback){
+                          console.log(&#x27;first function execution&#x27;);
+                          //... do something
+                          var response = Math.random();
+                          callback(response);
+                        };
+                    </code>
+                </pre>
+                <p>See the Pen <a href='http://codepen.io/nilsynils/pen/GmcvK/'>GmcvK</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script>-->
+            <div style="float: left" id="e_ajaxDiv">...</div>
+            <img class="img_width" src="images/callback.png"/>
+            <ul class="list-inline text-right">
+                <li>
+                    <a class="btn btn-primary" onclick="buttonClick()">Call me back</a>
+                </li>
             </ul>
         </div>
-        <div class="presenters">
-            <p>Scott <span class="twitterHandle">@scottlsoward</p>
-            <p>Nils <span class="twitterHandle">@nilsynils</p>
-            <p>http://ssoward.github.io/sort2014</p>
-        </div>
-        <div class="shield"></div>
     </section>
+</section>
 
-    <section id="c" class="slide">
-        <!--
-        <ul>
-            <li>JavaScript engines only have a single thread</li>
-            <li>JavaScript can only ever execute one piece of code at a time</li>
-            <li>Tasks live on queue and are completed sequentially</li>
-            <li>Asynchronous events are put in a queue and wait for execution</li>
-        </ul>
-        -->
-
-        <h2><img src="images/browser.png" alt="browser">One Thread</h2>
-        <div class="shield"></div>
-    </section>
-
-    <section id="d" class="slide">
-        <!--
-        <ul>
-            <li>Secrets of the JavaScript Ninja - John Resig</li>
-            <li>Browser event loop is single-threaded</li>
-            <li>Events are placed into the event queue</li>
-            <li>Events are handled in the order that its placed onto the queue</li>
-            <li>FIFO: first in first out</li>
-            <li>"Under no circumstances are two handlers executing simultaneously in separate threads"</li>
-        </ul>
-        -->
-
-        <h2><img src="images/browser.png" alt="browser">Event Loop</h2>
-        <section class="col-md-6 col-md-offset-3">
-            <img src="images/browser-event-loop.svg" alt="Browser Event Loop" style="height: 60%;" />
-            <!-- <img class="img_width" src="images/singleThread.png"/> -->
-        </section>
-    </section>
-
-    <section id="e" class="slide">
-        <!--
-        <ul>
-            <li>Callback function is also known as a callback pattern</li>
-            <li>Callback functions are derived from a programming paradigm called functional programming</li>
-            <li>Functional programming is the use of functions as arguments</li>
-            <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
-        </ul>
-        -->
-        <h2><img src="images/browser.png" alt="browser">Callbacks</h2>
-        <section>
-            <div class="col-md-10 col-md-offset-1">
-                <!--<div data-height="479" data-theme-id="9061" data-slug-hash="GmcvK" data-default-tab="js" data-user="nilsynils" class='codepen'>
-                    <pre>
-                        <code>
-                            function buttonClick(){
-                              console.log(&#x27;hello, click event&#x27;);
-                              functionWhichTakesFunctionAsArgument(callback);
-                            }
-
-                            var callback = function(data){
-                              console.log(&#x27;callback time! &#x27;+data);
-                            };
-
-                            function functionWhichTakesFunctionAsArgument(callback){
-                              console.log(&#x27;first function execution&#x27;);
-                              //... do something
-                              var response = Math.random();
-                              callback(response);
-                            };
-                        </code>
-                    </pre>
-                    <p>See the Pen <a href='http://codepen.io/nilsynils/pen/GmcvK/'>GmcvK</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-                </div>
-                <script async src="http://codepen.io/assets/embed/ei.js"></script>-->
-                <div style="float: left" id="e_ajaxDiv">...</div>
-                <img class="img_width" src="images/callback.png"/>
-                <ul class="list-inline text-right">
-                    <li>
-                        <a class="btn btn-primary" onclick="buttonClick()">Call me back</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </section>
-
-    <section id="f" class="slide">
-        <!--
-        <ul>
-            <li>AJAX = Asynchronous JavaScript and XML</li>
-        </ul>
-        -->
-        <h2><img src="images/ajax.png" alt="ajax">AJAX</h2>
-        <section>
-            <div class="col-md-10 col-md-offset-1">
-                <!-- <div data-height="450" data-theme-id="9061" data-slug-hash="DFBkp" data-default-tab="js" data-user="nilsynils" class='codepen'>
-                    <pre>
-                        <code>
-                            function buttonClick2(){
-                              consoleLog(&#x27;f_ajaxDiv&#x27;, &#x27;Click event&#x27;);
-                              functionWhithTakesFunctionAsArgument2(callback2);
-                              consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;No Blocking!!&#x27;)
-                            }
-
-                            var callback2 = function(data){
-                              consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;callback time! &#x27;+data);
-                            };
-
-                            function functionWhichTakesFunctionAsArgument2(someCallbackMethod){
-                              consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;first function execution&#x27;);
-                              //... do something
-                              setTimeout(function(){
-                                var response = Math.random();
-                                someCallbackMethod(response);
-                              }, 3000);
-                            };
-                        </code>
-                    </pre>
-                    <p>See the Pen <a href='http://codepen.io/nilsynils/pen/DFBkp/'>DFBkp</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-                </div>
-                <script async src="http://codepen.io/assets/embed/ei.js"></script> -->
-                <div class="figure">
-                    <div style="float: left" id="f_ajaxDiv">...</div>
-                    <img class="img_width" src="images/callback2.png"/>
-                    <ul class="list-inline text-right">
-                        <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <section id="g" class="slide">
-        <!--
-        <ul>
-            <li>You Ugly!</li>
-        </ul>
-        -->
-        <h2><img src="images/ajax.png" alt="ajax">AJAX</h2>
+<section id="f" class="slide">
+    <!--
+    <ul>
+        <li>AJAX = Asynchronous JavaScript and XML</li>
+    </ul>
+    -->
+    <h2><img src="images/ajax.png" alt="ajax">AJAX</h2>
+    <section>
         <div class="col-md-10 col-md-offset-1">
+            <!-- <div data-height="450" data-theme-id="9061" data-slug-hash="DFBkp" data-default-tab="js" data-user="nilsynils" class='codepen'>
+                <pre>
+                    <code>
+                        function buttonClick2(){
+                          consoleLog(&#x27;f_ajaxDiv&#x27;, &#x27;Click event&#x27;);
+                          functionWhithTakesFunctionAsArgument2(callback2);
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;No Blocking!!&#x27;)
+                        }
+
+                        var callback2 = function(data){
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;callback time! &#x27;+data);
+                        };
+
+                        function functionWhichTakesFunctionAsArgument2(someCallbackMethod){
+                          consoleLogAdd(&#x27;f_ajaxDiv&#x27;, &#x27;first function execution&#x27;);
+                          //... do something
+                          setTimeout(function(){
+                            var response = Math.random();
+                            someCallbackMethod(response);
+                          }, 3000);
+                        };
+                    </code>
+                </pre>
+                <p>See the Pen <a href='http://codepen.io/nilsynils/pen/DFBkp/'>DFBkp</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+            <script async src="http://codepen.io/assets/embed/ei.js"></script> -->
             <div class="figure">
-                <img class="img_width" src="images/ajaxOldSchool.png"/>
-                <div id="ajaxDiv">Some Static data</div>
+                <div style="float: left" id="f_ajaxDiv">...</div>
+                <img class="img_width" src="images/callback2.png"/>
                 <ul class="list-inline text-right">
-                    <li><a class="btn btn-primary" onclick="loadXMLDoc('ajaxDiv')">Call me back</a></li>
+                    <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
                 </ul>
             </div>
         </div>
     </section>
+</section>
 
-    <section id="i" class="slide">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2><img src="images/ajax.png" alt="ajax">Nesting</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <img class="img_width" src="images/ajaxNesting.png"/>
-            </div>
+<section id="g" class="slide">
+    <!--
+    <ul>
+        <li>You Ugly!</li>
+    </ul>
+    -->
+    <h2><img src="images/ajax.png" alt="ajax">AJAX</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <img class="img_width" src="images/ajaxOldSchool.png"/>
+            <div id="ajaxDiv">Some Static data</div>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="loadXMLDoc('ajaxDiv')">Call me back</a></li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="j" class="slide">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2><img src="images/ajax.png" alt="ajax">Nesting</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <!--<img class="img_width" src="./images/ajaxNesting.png"/>-->
-                <div id="nest1">div1</div>
-                <div id="nest2">div2</div>
-                <div id="nest3">div3</div>
-                <div id="nest4">div4</div>
-                <div id="nest5">div5</div>
-                <div id="nest6">div6</div>
-                <div id="nest7">div7</div>
-                <ul class="list-inline text-right">
-                    <li><a class="btn btn-primary" onclick="nestedMethod()">Call me back</a></li>
-                </ul>
-            </div>
+<section id="i" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2><img src="images/ajax.png" alt="ajax">Nesting</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <img class="img_width" src="images/ajaxNesting.png"/>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="k" class="slide">
-        <!--
-        <ul>
-            <li> The primary way of interacting with a promise is through its then method<li>
-            <li> the then method registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.</li>
-        </ul>
-        -->
-        <h2><img src="images/promises.png" alt="promises">Promises</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <img src="images/promise-def.png" alt="promises noun" class="col-md-6">
-                <p class="col-md-6">A promise represents the eventual result of an asynchronous operation.
+<section id="j" class="slide">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2><img src="images/ajax.png" alt="ajax">Nesting</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <!--<img class="img_width" src="./images/ajaxNesting.png"/>-->
+            <div id="nest1">div1</div>
+            <div id="nest2">div2</div>
+            <div id="nest3">div3</div>
+            <div id="nest4">div4</div>
+            <div id="nest5">div5</div>
+            <div id="nest6">div6</div>
+            <div id="nest7">div7</div>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="nestedMethod()">Call me back</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="k" class="slide">
+    <!--
+    <ul>
+        <li> A promise represents the eventual result of an asynchronous operation.</li>
+        <li> The primary way of interacting with a promise is through its then method</li>
+        <li> The then method registers callbacks to receive either a promise’s eventual value or the reason why the promise cannot be fulfilled.</li>
+        <li> www.promisesaplus.com Promises/A+</li>
+    </ul>
+    -->
+    <h2><img src="images/promises.png" alt="promises">Promises</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <img src="images/promise-def.png" alt="promises noun" class="col-md-6">
+            <p class="col-md-6">A promise represents the eventual result of an asynchronous operation.
                 <br /><br />
-                <a class="img_width" href="http://promisesaplus.com/#point-2">Promises/A+</a>
-                </p>
-            </div>
+                <a class="img_width" target="_blank" href="http://promisesaplus.com/#point-2">Promises/A+</a>
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="l" class="slide">
-        <!--
-        <ul>
-            <li>Angular</li>
-        </ul>
-        -->
-        <h2><img src="images/promises.png" alt="promises">Terminology</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure explanation">
-                <ul>
-                    <li><strong><em>promise</em></strong> is an object/function with a <em>then</em> method</li>
-                    <li><strong><em>thenable</em></strong> is an object/function that defines a <em>then</em> method</li>
-                    <li><strong><em>value</em></strong> is any legal JavaScript value (<em>undefined, thenable, promise</em>, etc)</li>
-                    <li><strong><em>exception</em></strong> is a value that is thrown using the <em>throw</em> statement</li>
-                    <li><strong><em>reason</em></strong> is a value that indicates why a promise was rejected</li>
-                </ul>
-            </div>
+<section id="l" class="slide">
+    <!--
+    <ul>
+         <li> <b>promise   </b>is an object/function with a <em>then</em> method</li>
+         <li> <b>thenable  </b>is an object/function that defines a <em>then</em> method</li>
+         <li> <b>value     </b>is any legal JavaScript value (<em>undefined, thenable, promise</em>, etc)</li>
+         <li> <b>exception </b>is a value that is thrown using the <em>throw</em> statement</li>
+         <li> <b>reason    </b>is a value that indicates why a promise was rejected</li>
+    </ul>
+    -->
+    <h2><img src="images/promises.png" alt="promises">Terminology</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure explanation">
+            <ul>
+                <li><strong><em>promise</em></strong> - object/function with a <em>then</em> method</li>
+                <li><strong><em>thenable</em></strong> - object/function defining <em>then</em> method</li>
+                <li><strong><em>value</em></strong> - any legal JS value.</li>
+                <li><strong><em>exception</em></strong> - value thrown using <em>throw</em> statement</li>
+                <li><strong><em>reason</em></strong> - value indicating why promise was rejected</li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="m" class="slide">
-        <!--
-        <ul>
-            <li>Angular</li>
-        </ul>
-        -->
-        <h2><img src="images/promises.png" alt="promises">Three States</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure explanation">
-                <ul>
-                    <li><strong><em>Pending</em></strong>: transition to either the fulfilled or rejected state</li>
-                    <li><strong><em>Fulfilled</em></strong>: must not transition to any other state.
-                        must have a value, which must not change</li>
-                    <li><strong><em>Rejected</em></strong>: must not transition to any other state.
-                        must have a reason, which must not change.</li>
-                </ul>
-            </div>
+<section id="m" class="slide">
+    <!--
+     <ul>
+        <li><strong><em>Pending</em></strong>: transition to either the fulfilled or rejected state</li>
+        <li><strong><em>Fulfilled</em></strong>: must not transition to any other state.
+                    must have a value, which must not change</li>
+        <li><strong><em>Rejected</em></strong>: must not transition to any other state.
+                    must have a reason, which must not change.</li>
+     </ul>
+    -->
+    <h2><img src="images/promises.png" alt="promises">Three States</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure explanation">
+            <ul>
+                <li><em><strong>pending   </strong></em>: initial state, not fulfilled or rejected.</li>
+                <li><em><strong>fulfilled </strong></em>: successful operation</li>
+                <li><em><strong>rejected  </strong></em>: failed operation.</li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="n" class="slide">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2><img src="images/promises.png" alt="promises">Promise</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <img class="img_width" src="images/promise.png"/>
-                <div id="promiseDiv">Some Static data</div>
-                <ul class="list-inline text-right">
-                    <li><a class="btn btn-primary" onclick="promise('promiseDiv')">Call me back</a></li>
-                </ul>
-            </div>
+<section id="n" class="slide">
+    <!--
+    <ul>
+        <li>This is a contrived example of how the promise works</li>
+        <li>1. the loadXMLDocThen calls a service via AJAX</li>
+        <li>2. the return of the loadXMLDocThen is an object with a then function</li>
+        <li>3. the then function takes in a function as its input</li>
+        <li>4. the then function executes the input function with the AJAX result as the value</li>
+    </ul>
+    -->
+    <h2><img src="images/promises.png" alt="promises">Promise</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <img class="img_width" src="images/promise.png"/>
+            <div id="promiseDiv">Some Static data</div>
+            <ul class="list-inline text-right">
+                <li><a class="btn btn-primary" onclick="promise('promiseDiv')">Call me back</a></li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="o1" class="slide" ng-app="myApp">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <ul class="">
-                    <li>Facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object.</li>
-                    <li>A function which takes a single argument — a configuration object — that is used to generate an HTTP request and returns a promise with two $http specific methods: success and error.</li>
-                </ul>
-            </div>
-            <img class="img_width" src="images/http.png"/>
+<section id="o" class="slide" ng-app="myApp">
+    <!--
+     <ul class="">
+        <li>Facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object.</li>
+        <li>HTTP is a function which takes a single argument — a configuration object — </li>
+        <li>The configuration object is used to generate an HTTP request and returns a promise with two $http specific methods: success and error.</li>
+     </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/http.png"/>
+    </div>
+</section>
+
+<section id="o1" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>AngularJS code for $http</li>
+        <li>Notice: it creates a promise with $q that we'll talk about </li>
+        <li>It creates a success method</li>
+        <li>And it creates an error method</li>
+        <li>misspelling of unnecessary</li>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS"> $http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <p data-height="557" data-theme-id="9151" data-slug-hash="ljrKG" data-default-tab="js" data-user="ssoward" class='codepen'>See the Pen <a href='http://codepen.io/ssoward/pen/ljrKG/'>ljrKG</a> by scott (<a href='http://codepen.io/ssoward'>@ssoward</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            <script async src="//codepen.io/assets/embed/ei.js"></script>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="o2" class="slide" ng-app="myApp">
-        <!--
-         <ul>
-              <li>1. Harness</li>
-              <li>2. Anchor Rope</li>
-              <li>3. Rope/Harness</li>
-              <li>4. Rappel On</li>
-              <li>APP</li>
-         </ul>
-         -->
-        <div class="shield"></div>
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">Mountaineering</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <ol>
-                    <li>Harness</li>
-                    <li>Anchor Rope</li>
-                    <li>Rope/Harness</li>
-                    <li>Rappel On</li>
-                    <li><a target="_blank" href="../app">App</a></li>
-                </ol>
-            </div>
+<section id="o3" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>$http</li>
+      <li>the canRappel method returns a success and error</li>
+  </ul>
+  -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS"> $http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappel.png"/>
+        <div class="figure">
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="o" class="slide" ng-app="myApp">
-        <!--
-      <ul>
-          <li>$http</li>
-      </ul>
-      -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappel.png"/>
-            <div class="figure">
+<section id="os" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Move our $http call to a service.js</li>
+      <li>And the canRappel from the service js does the same thing</li>
+  </ul>
+  -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS"> $http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelService.png"/>
+        <div class="figure">
 
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="os" class="slide" ng-app="myApp">
-        <!--
-      <ul>
-          <li>Move our $http call to a service.js</li>
-      </ul>
-      -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelService.png"/>
-            <div class="figure">
+<section id="ot" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Using the THEN method</li>
+      <li>Not only do we get the success and error methods</li>
+      <li>but because the return object from $http is a promise we have a then method</li>
+  </ul>
+  -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS"> $http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelThen.png"/>
+        <div class="figure">
 
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="ot" class="slide" ng-app="myApp">
-        <!--
-      <ul>
-          <li>Using the THEN method</li>
-      </ul>
-      -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelThen.png"/>
-            <div class="figure">
-
-            </div>
-        </div>
-    </section>
-
-    <section id="oc" class="slide" ng-app="myApp">
-        <!--
-      <ul>
-          <li>Chaining 'then' methods</li>
-      </ul>
-      -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelChainThen.png"/>
-            <div class="figure">
-
-            </div>
-        </div>
-    </section>
-
-    <section id="ote" class="slide" ng-app="myApp">
-        <!--
-      <ul>
-          <li>Chaining with Error handling</li>
-      </ul>
-      -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelChainError.png"/>
-            <div class="figure">
-
-            </div>
-        </div>
-    </section>
-
-    <section id="otr" class="slide" ng-app="myApp">
-        <!--
-      <ul>
-          <li>Chaining with Try/Catch</li>
-      </ul>
-      -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">AngularJS - $http</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelChainTry.png"/>
-            <div class="figure">
-
-            </div>
-        </div>
-    </section>
-
-    <section id="p" class="slide" ng-app="myApp">
-        <!--
-        <ul>
-            <li>Chaining then simplified with error handling in the service class</li>
-        </ul>
-        -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">Chaining</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelChaining.png"/>
-            <div class="figure">
-            </div>
-        </div>
-    </section>
-
-    <section id="q" class="slide" ng-app="myApp">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                A promise/deferred implementation inspired by <a href="https://github.com/kriskowal/q">Kris Kowal's Q</a>.
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="qp" class="slide" ng-app="myApp">
-        <!--
-        <ul>
-            <li>$q deferred.</li>
-        </ul>
-        -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelQ.png"/>
-            <div class="figure">
-            </div>
-        </div>
-    </section>
-
-    <section id="qa" class="slide" ng-app="myApp">
-        <!--
-        <ul>
-            <li>$q.all(...) we can all multiple promises to $q and run them.</li>
-        </ul>
-        -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q.all()</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <img class="img_width" src="images/canRappelQAll.png"/>
-            <div class="figure">
-            </div>
-        </div>
-    </section>
-
-    <section id="r" class="slide" ng-app="myApp">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">placeholder</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <!--<div ui-view autoscroll="false"></div>-->
-            </div>
-        </div>
-    </section>
-
-    <section id="s" class="slide" ng-app="myApp">
-        <!--
-        <ul>
-            <li>When se</li>
-        </ul>
-        -->
-        <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">placeholder</h2>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="figure">
-                <!--<div ui-view autoscroll="false"></div>-->
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- deck.navigation snippet-->
-    <a target="_blank" href="#" title="Previous" class="deck-prev-link">&#8592;</a>
-    <a target="_blank" href="#" title="Next" class="deck-next-link">&#8594;</a>
-    <!-- deck.status snippet-->
-    <p class="deck-status">
-        <span class="deck-status-current"></span>/<span class="deck-status-total"></span></p>
-    <!-- deck.goto snippet-->
-    <form action="" method="get" class="goto-form">
-        <label for="goto-slide">Go to slide:</label>
-        <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
-        <datalist id="goto-datalist"></datalist>
-        <input type="submit" value="Go">
-    </form>
-    <!--deck.hash snippet-->
-    <a target="_blank" href="" title="Permalink to this slide" class="deck-permalink">#</a>
+<section id="o2" class="slide" ng-app="myApp">
+    <!--
+     <ul>
+          <li>1. Harness</li>
+          <li>2. Anchor Rope</li>
+          <li>3. Rope/Harness</li>
+          <li>4. Rappel On</li>
+          <li>APP</li>
+     </ul>
+     -->
     <div class="shield"></div>
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">Mountaineering</h2>
+    <a target="_blank" href="../app">App</a>
+    <div class="col-md-10 col-md-offset-1">
+    </div>
+</section>
+
+<section id="oc" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Embedding 'then' methods</li>
+      <li>Because each method returns a promise, we can attach a .then()</li>
+      <li>In real situation you would most likely be using the result value within the embedded callback</li>
+      <li>Achieving sequential async</li>
+  </ul>
+  -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelChainThen.png"/>
+        <div class="figure">
+
+        </div>
+    </div>
+</section>
+
+<section id="ote" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Embedding with Error handling</li>
+  </ul>
+  -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS"> $http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelChainError.png"/>
+        <div class="figure">
+
+        </div>
+    </div>
+</section>
+
+<section id="otr" class="slide" ng-app="myApp">
+    <!--
+  <ul>
+      <li>Chaining with Try/Catch</li>
+  </ul>
+  -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS"> $http</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelChainTry.png"/>
+        <div class="figure">
+
+        </div>
+    </div>
+</section>
+
+<section id="p" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>Chaining then simplified with error handling in the service class</li>
+        <li>One gotcha: if your chaing is broken, be sure that you are returning a promise</li>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">Chaining</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelChaining.png"/>
+        <div class="figure">
+        </div>
+    </div>
+</section>
+
+<section id="q" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            A promise/deferred implementation inspired by Kris Kowal's <a target="_blank" href="https://github.com/kriskowal/q">Q</a>.
+            <img class="img_width" src="images/q.png"/>
+        </div>
+    </div>
+</section>
+
+
+<section id="qp" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>$q deferred.</li>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelQ.png"/>
+        <div class="figure">
+        </div>
+    </div>
+</section>
+
+<section id="qa" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>$q.all(...) we can all multiple promises to $q and run them.</li>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q.all()</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <img class="img_width" src="images/canRappelQAll.png"/>
+        <div class="figure">
+        </div>
+    </div>
+</section>
+
+<section id="r" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <div class="shield"></div>
+    <h2>References</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <!--<div ui-view autoscroll="false"></div>-->
+        </div>
+    </div>
+</section>
+
+<section id="s" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>When se</li>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">placeholder</h2>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="figure">
+            <!--<div ui-view autoscroll="false"></div>-->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- deck.navigation snippet-->
+<a target="_blank" href="#" title="Previous" class="deck-prev-link">&#8592;</a>
+<a target="_blank" href="#" title="Next" class="deck-next-link">&#8594;</a>
+<!-- deck.status snippet-->
+<p class="deck-status">
+    <span class="deck-status-current"></span>/<span class="deck-status-total"></span></p>
+<!-- deck.goto snippet-->
+<form action="" method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+</form>
+<!--deck.hash snippet-->
+<a target="_blank" href="" title="Permalink to this slide" class="deck-permalink">#</a>
+<div class="shield"></div>
 </div>
 
 <!-- Required JS files.-->
@@ -718,8 +746,6 @@
             return loadXMLDocThen('nest2');
         });
     }
-
-
 
 </script>
 

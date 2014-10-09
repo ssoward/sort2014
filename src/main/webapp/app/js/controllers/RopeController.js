@@ -71,7 +71,7 @@ angular.module('myApp').controller('RopeController', function ($scope, RopeServi
                 return $scope.anchorHarnessOnOff(true);
             })
             .then(function(){
-               return $scope.rappelOn();
+                return $scope.rappelOn();
             });
 
         defer.resolve();
@@ -109,7 +109,7 @@ angular.module('myApp').controller('RopeController', function ($scope, RopeServi
 //            })
 //            .then(function(){});
 //    };
-
+//
 //    $scope.rappelPrepare = function(){
 //        $scope.harnessOnOff(true)
 //            .then(function(){
@@ -124,6 +124,49 @@ angular.module('myApp').controller('RopeController', function ($scope, RopeServi
 //                    },function(error) { throw "An error putting the rope on the shrub: " + error; });
 //            },function(error) { throw "An error putting on harness: " + error; });
 //    };
+
+//    $scope.rappelPrepare = function(){
+//        $scope.harnessOnOff(true)
+//            .then(function(){
+//                $scope.anchorShrubOnOff(true)
+//                    .then(function(){
+//                        $scope.anchorHarnessOnOff(true)
+//                            .then(function(){
+//                                $scope.rappelOn()
+//                                    .then(function(){})
+//                                    .catch(function(error) { throw "An error rappelling: " + error; });
+//                            })
+//                            .catch(function(error) { throw "An error putting the rope on the harness: " + error; });
+//                    })
+//                    .catch(function(error) { throw "An error putting the rope on the shrub: " + error; });
+//            })
+//            .catch(function(error) { throw "An error putting on harness: " + error; });
+//    };
+
+
+    function simpleQ(val){
+        var q = $q.defer();
+        if(val && typeof val != 'undefined') {
+            q.resolve(val.replace('Nils', 'Scott'));
+        }else{
+            q.reject('undefined');
+        }
+        return q.promise;
+    }
+
+    $scope.clearMessage = function() {
+        $scope.message = '';
+    };
+
+    $scope.promiseQ = function() {
+        var promise = simpleQ($scope.message);
+        promise.then(function(res){
+            $log.info(res);
+            $scope.messageOut =  res;
+        }, function(error){
+            $scope.messageOut =  error;
+        });
+    };
 
 
 

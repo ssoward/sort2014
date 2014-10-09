@@ -248,7 +248,7 @@ body.deck-container {
   font-family: Roboto Slab, sans-serif;
   color: #fff;
 }
-.slide h2 span { 
+.slide h2 span {
   font-size: 55px;
   display: block;
   opacity: 0.8;
@@ -432,8 +432,8 @@ body.deck-container {
 
 /* Nils Additions */
 .presenters {
-  color: #888; 
-  position: absolute; 
+  color: #888;
+  position: absolute;
   bottom: 10px;
 }
 
@@ -526,7 +526,10 @@ iframe {
   background: url('../../images/rope.JPG') center center repeat #000;
 }
 #o2 {
-  background: url('../../images/shrub.JPG') center center repeat #000;
+  background: url('../../images/shrub.jpg') center center repeat #000;
+}
+#r {
+  background: url('../../images/tierdrop.jpg') center center repeat #000;
 }
 .explanation li strong {
   text-transform: uppercase;

@@ -17,13 +17,13 @@
 }
 
 #note {
-    width: 50%;
-    font-size: 25px;
+    width: 70%;
+    font-size: 30px;
 }
 
 #curr-slide {
-    width: 300px;
+    width: 15%;
 }
 #next-slide {
-    width: 300px;
+    /*width: 300px;*/
 }
