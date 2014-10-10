@@ -1,60 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 673 515" enable-background="new 0 0 673 515" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
 <g id="Layer_2">
-	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="199.1,87.9 199.3,114.5 210.5,114.4 191.7,133.3 
-		173.5,115.2 183.5,115.2 183.3,87.9 	"/>
-	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="199.1,197.9 199.3,224.5 210.5,224.5 191.7,243.4 
-		173.5,225.3 183.5,225.3 183.3,198 	"/>
-	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="199.1,330.4 199.3,357 210.5,357 191.7,375.9 
-		173.5,357.8 183.5,357.8 183.3,330.5 	"/>
-	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="114.2,306.9 61.9,306.8 61.8,318 43.1,299 61.4,281 
-		61.3,291 114.4,291.1 	"/>
-	<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" points="20.8,169.2 77.4,169.3 
-		77.4,158.2 96.3,176.9 78.2,195.1 78.2,185.1 38,185.2 38,185.2 38.5,478 183.5,478 183.5,456.3 201.3,456.2 201.3,494.7 
-		20.8,494.7 	"/>
-	<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" points="343.2,193.1 317.7,193 
-		317.7,204.1 298.9,185.3 317,167.2 317,177.2 342.4,177.3 342.4,166.2 361.3,184.9 343.2,203.1 	"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="181.1,241.8 181.2,266 191.4,265.9 174.3,283.1 
+		157.8,266.6 166.9,266.6 166.7,241.8 	"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="181.1,341.8 181.2,366 191.4,366 174.3,383.2 
+		157.8,366.7 166.9,366.7 166.7,341.9 	"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="181.1,462.3 181.2,486.5 191.4,486.5 174.3,503.7 
+		157.8,487.2 166.9,487.2 166.7,462.4 	"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="103.8,440.9 56.3,440.8 56.2,451 39.2,433.7 55.8,417.4 
+		55.7,426.5 104,426.6 	"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" points="18.9,315.7 70.4,315.8 
+		70.4,305.7 87.6,322.7 71.1,339.3 71.1,330.2 34.6,330.3 34.6,330.3 35,596.5 166.9,596.5 166.9,576.8 183.1,576.7 183.1,611.7 
+		18.9,611.7 	"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" points="312.1,337.4 288.9,337.3 
+		288.9,347.4 271.8,330.3 288.3,313.9 288.3,323 311.4,323.1 311.4,313 328.6,330 312.1,346.5 	"/>
 </g>
-<g id="Layer_1">
-	<path fill="#F89E20" stroke="#000000" stroke-miterlimit="10" d="M272,96H112c-6.6,0-12-5.4-12-12V30c0-6.6,5.4-12,12-12h160
-		c6.6,0,12,5.4,12,12v54C284,90.6,278.6,96,272,96z"/>
-	<path fill="#7F6DB1" stroke="#000000" stroke-miterlimit="10" d="M272,216.7H112c-6.6,0-12-5.4-12-12v-54c0-6.6,5.4-12,12-12h160
-		c6.6,0,12,5.4,12,12v54C284,211.3,278.6,216.7,272,216.7z"/>
-	<path fill="#44B1E4" stroke="#000000" stroke-miterlimit="10" d="M272,458H112c-6.6,0-12-5.4-12-12v-54c0-6.6,5.4-12,12-12h160
-		c6.6,0,12,5.4,12,12v54C284,452.6,278.6,458,272,458z"/>
-	<polygon fill="#52BE97" stroke="#000000" stroke-miterlimit="10" points="146,350.1 100,298.6 146,247 238,247 284,298.6 
-		238,350.1 	"/>
-	<path fill="#E9E9E9" stroke="#000000" stroke-miterlimit="10" d="M492,292c0,0-40.3-11.9-60,18c-26,39.4-60,18-60,18V177.7h120V292
-		z"/>
-	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="655.8,138.1 542.1,176.5 547.2,191.7 513,174.7 
-		529.3,141.8 533.9,155.4 648.5,116.6 	"/>
-	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="660,248 540,248 540,264 513,237 539,211 539,225.3 
-		660,225.3 	"/>
-	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="650.7,357.2 537.1,318.5 531.9,333.7 515,299.4 
-		548,283.2 543.4,296.7 658,335.7 	"/>
+<g id="Layer_1_1_">
+	<path fill="#F89E20" stroke="#000000" stroke-miterlimit="10" d="M247.3,249.1H101.8c-6,0-10.9-4.9-10.9-10.9v-49.1
+		c0-6,4.9-10.9,10.9-10.9h145.5c6,0,10.9,4.9,10.9,10.9v49.1C258.3,244.2,253.3,249.1,247.3,249.1z"/>
+	<path fill="#7F6DB1" stroke="#000000" stroke-miterlimit="10" d="M247.3,358.9H101.8c-6,0-10.9-4.9-10.9-10.9v-49.1
+		c0-6,4.9-10.9,10.9-10.9h145.5c6,0,10.9,4.9,10.9,10.9V348C258.3,354,253.3,358.9,247.3,358.9z"/>
+	<path fill="#44B1E4" stroke="#000000" stroke-miterlimit="10" d="M247.3,578.3H101.8c-6,0-10.9-4.9-10.9-10.9v-49.1
+		c0-6,4.9-10.9,10.9-10.9h145.5c6,0,10.9,4.9,10.9,10.9v49.1C258.3,573.4,253.3,578.3,247.3,578.3z"/>
+	<polygon fill="#52BE97" stroke="#000000" stroke-miterlimit="10" points="132.8,480.2 90.9,433.4 132.8,386.5 216.4,386.5 
+		258.3,433.4 216.4,480.2 	"/>
+	<path fill="#E9E9E9" stroke="#000000" stroke-miterlimit="10" d="M447.4,427.4c0,0-36.6-10.8-54.6,16.4
+		c-23.6,35.8-54.6,16.4-54.6,16.4V323.4h109.1V427.4z"/>
+	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="596.4,287.4 493,322.3 497.6,336.2 466.5,320.7 
+		481.3,290.8 485.5,303.2 589.7,267.9 	"/>
+	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="600.2,387.4 491.1,387.4 491.1,401.9 466.5,377.4 
+		490.1,353.7 490.1,366.7 600.2,366.7 	"/>
+	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="591.7,486.7 488.4,451.5 483.7,465.3 468.3,434.1 
+		498.3,419.4 494.1,431.6 598.4,467.1 	"/>
 </g>
 <g id="Layer_3">
-	<rect x="124" y="38" fill="none" width="137" height="65"/>
-	<text transform="matrix(1 0 0 1 135.4404 50.9199)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">Parse Markup </tspan><tspan x="-10.5" y="20.4" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">and Set Up DOM</tspan></text>
-	<rect x="118" y="159.2" fill="none" width="149" height="65"/>
-	<text transform="matrix(1 0 0 1 128.4678 172.0824)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">Check for Event </tspan><tspan x="-7.9" y="20.4" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">at Head of Queue</tspan></text>
-	<rect x="118" y="290" fill="none" width="149" height="65"/>
-	<text transform="matrix(1 0 0 1 136.8516 302.9486)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">Is There One?</text>
-	<rect x="118" y="411.3" fill="none" width="149" height="32.5"/>
-	<text transform="matrix(1 0 0 1 135.897 424.1981)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">Process Event</text>
-	<rect x="203.3" y="357" fill="none" width="58.4" height="32.5"/>
-	<text transform="matrix(1 0 0 1 218.4346 369.9481)" font-family="'OpenSans-Semibold'" font-size="17">Yes</text>
-	<rect x="59.6" y="273.8" fill="none" width="58.4" height="32.5"/>
-	<text transform="matrix(1 0 0 1 76.9517 286.6981)" font-family="'OpenSans-Semibold'" font-size="17">No</text>
-	<rect x="372" y="187.9" fill="none" width="120" height="59.1"/>
-	<text transform="matrix(1 0 0 1 403.6787 203.8436)"><tspan x="0" y="0" font-family="'OpenSans-Semibold'" font-size="21">Event </tspan><tspan x="-5.4" y="25.2" font-family="'OpenSans-Semibold'" font-size="21">Queue</tspan></text>
+	<rect x="112.8" y="196.4" fill="none" width="124.6" height="59.1"/>
+	<text transform="matrix(1 0 0 1 123.1641 208.1441)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4591">Parse Markup </text>
+	<text transform="matrix(1 0 0 1 113.6157 226.6948)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4591">and Set Up DOM</text>
+	<rect x="107.3" y="306.6" fill="none" width="135.5" height="59.1"/>
+	<text transform="matrix(1 0 0 1 116.8233 318.3247)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4591">Check for Event </text>
+	<text transform="matrix(1 0 0 1 109.6396 336.8755)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4591">at Head of Queue</text>
+	<rect x="107.3" y="425.6" fill="none" width="135.5" height="59.1"/>
+	<text transform="matrix(1 0 0 1 124.4473 437.3291)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4591">Is There One?</text>
+	<rect x="107.3" y="535.9" fill="none" width="135.5" height="29.6"/>
+	<text transform="matrix(1 0 0 1 123.5791 547.5889)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4591">Process Event</text>
+	<rect x="184.9" y="486.5" fill="none" width="53.1" height="29.6"/>
+	<text transform="matrix(1 0 0 1 198.6357 498.2559)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="15.4591">Yes</text>
+	<rect x="54.2" y="410.8" fill="none" width="53.1" height="29.6"/>
+	<text transform="matrix(1 0 0 1 69.9766 422.5518)" fill="#939598" font-family="'OpenSans-Semibold'" font-size="15.4591">No</text>
+	<rect x="338.3" y="332.7" fill="none" width="109.1" height="53.7"/>
+	<text transform="matrix(1 0 0 1 367.0899 347.207)" font-family="'OpenSans-Semibold'" font-size="19.0966">Event </text>
+	<text transform="matrix(1 0 0 1 362.1787 370.123)" font-family="'OpenSans-Semibold'" font-size="19.0966">Queue</text>
 	
-		<text transform="matrix(0.948 0.3182 -0.3182 0.948 525.488 308.4544)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">Network Events</text>
+		<text transform="matrix(0.948 0.3182 -0.3182 0.948 477.8582 442.3364)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4588">Network Events</text>
 	
-		<text transform="matrix(0.9456 -0.3255 0.3255 0.9456 549.9687 168.3712)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">Mouse Clicks</text>
+		<text transform="matrix(0.9455 -0.3255 0.3255 0.9455 500.1199 314.9495)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.46">Mouse Clicks</text>
 	
-		<text transform="matrix(1 -7.070850e-03 7.070850e-03 1 553.3356 241.9793)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="17">Keypresses</text>
+		<text transform="matrix(1 -7.070674e-03 7.070674e-03 1 503.1815 381.8865)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4595">Keypresses</text>
 </g>
 </svg>
