@@ -38,6 +38,10 @@
 <div class="deck-container">
 
 <section id="a" class="slide">
+    <!--
+        Welcome to our presentation
+        I am ...
+    -->
     <h2><img src="images/AngularJS-Shield-small.png" alt="Angular Shield" />AngularJS Promises <span>Sequential Async</span></h2>
 </section>
 
@@ -99,6 +103,8 @@
         <li>Callback functions are derived from a programming paradigm called functional programming</li>
         <li>Functional programming is the use of functions as arguments</li>
         <li>JavaScript functions are first-class objects and can be passed as arguments to functions</li>
+        <li>This is my "explain to a 6 year old" callbacks:</li>
+        <li>Dog is the object, go eat your food is the function</li>
     </ul>
     -->
     <h2><img src="images/browser.png" alt="browser">Callbacks</h2>
@@ -127,13 +133,7 @@
                 <p>See the Pen <a href='http://codepen.io/nilsynils/pen/GmcvK/'>GmcvK</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
             </div>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>-->
-            <div style="float: left" id="e_ajaxDiv">...</div>
             <img class="img_width" src="images/callback.png"/>
-            <ul class="list-inline text-right">
-                <li>
-                    <a class="btn btn-primary" onclick="buttonClick()">Call me back</a>
-                </li>
-            </ul>
         </div>
     </section>
 </section>
@@ -174,7 +174,6 @@
             </div>
             <script async src="http://codepen.io/assets/embed/ei.js"></script> -->
             <div class="figure">
-                <div style="float: left" id="f_ajaxDiv">...</div>
                 <img class="img_width" src="images/callback2.png"/>
                 <ul class="list-inline text-right">
                     <li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
@@ -212,30 +211,6 @@
     <div class="col-md-10 col-md-offset-1">
         <div class="figure">
             <img class="img_width" src="images/ajaxNesting.png"/>
-        </div>
-    </div>
-</section>
-
-<section id="j" class="slide">
-    <!--
-    <ul>
-        <li>When se</li>
-    </ul>
-    -->
-    <h2><img src="images/ajax.png" alt="ajax">Nesting</h2>
-    <div class="col-md-10 col-md-offset-1">
-        <div class="figure">
-            <!--<img class="img_width" src="./images/ajaxNesting.png"/>-->
-            <div id="nest1">div1</div>
-            <div id="nest2">div2</div>
-            <div id="nest3">div3</div>
-            <div id="nest4">div4</div>
-            <div id="nest5">div5</div>
-            <div id="nest6">div6</div>
-            <div id="nest7">div7</div>
-            <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="nestedMethod()">Call me back</a></li>
-            </ul>
         </div>
     </div>
 </section>
@@ -321,10 +296,6 @@
     <div class="col-md-10 col-md-offset-1">
         <div class="figure">
             <img class="img_width" src="images/promise.png"/>
-            <div id="promiseDiv">Some Static data</div>
-            <ul class="list-inline text-right">
-                <li><a class="btn btn-primary" onclick="promise('promiseDiv')">Call me back</a></li>
-            </ul>
         </div>
     </div>
 </section>
@@ -645,42 +616,43 @@
 
     // Callbacks
 
-    function buttonClick(){
-        consoleLog('e_ajaxDiv', 'Click event');
-        functionWhichTakesFunctionAsArgument(callback);
-    }
-
-    var callback = function(data){
-        consoleLogAdd('e_ajaxDiv', 'callback time! '+data);
+    var callback = function(param1){
+        console.log(5 + param1);
     };
 
-    function functionWhichTakesFunctionAsArgument(someCallbackMethod){
-        consoleLogAdd('e_ajaxDiv', 'first function execution');
+    //input param is a function
+    function runMeFirst(runThisWhenDone){
         //... do something
         var response = Math.random();
-        someCallbackMethod(response);
+        runThisWhenDone(response);
     }
+
+    runMeFirst(callback);
+
+
 
     // AJAX
 
-    function buttonClick2(){
-        consoleLog('f_ajaxDiv', 'Click event');
-        functionWhichTakesFunctionAsArgument2(callback2);
-        consoleLogAdd('f_ajaxDiv', 'No Blocking!!')
-    }
 
-    var callback2 = function(data){
-        consoleLogAdd('f_ajaxDiv', 'callback time! '+data);
+    var callMeAfter = function(data){
+        console.log(data);
     };
 
-    function functionWhichTakesFunctionAsArgument2(someCallbackMethod){
-        consoleLogAdd('f_ajaxDiv', 'first function execution');
-        //... do something
+    function simulateAJAX(runWhenDone){
+        //... do something that creates delay (AJAX-esk)
         setTimeout(function(){
             var response = Math.random();
-            someCallbackMethod(response);
+            runWhenDone(response);
         }, 3000);
-    };
+    }
+
+    function buttonClick2() {
+        console.log('start');
+        simulateAJAX(callMeAfter);
+        console.log('No Blocking!!');
+    }
+
+
 
 
     function loadXMLDoc(someDiv, callback){
@@ -721,8 +693,8 @@
         });
     };
 
-    function loadXMLDocThen(someDiv){
-        var response = loadXMLDoc(someDiv);
+    function anyFunction(){
+        var response = loadXMLDoc();
         return {
             then: function(callback) {
                 if (callback) {
@@ -732,11 +704,11 @@
         };
     }
 
-    function promise(val) {
-        var promise = loadXMLDocThen(val);
+    function promise() {
+        var promise = anyFunction();
 
         promise.then(function(res){
-            return loadXMLDocThen('nest2');
+            console.log(res);
         });
     }
 
