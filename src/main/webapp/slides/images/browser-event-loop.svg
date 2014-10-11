@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+	 viewBox="0 166 612 454" enable-background="new 0 166 612 454" xml:space="preserve">
 <g id="Layer_2">
 	<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="181.1,241.8 181.2,266 191.4,265.9 174.3,283.1 
 		157.8,266.6 166.9,266.6 166.7,241.8 	"/>
@@ -27,7 +27,7 @@
 	<polygon fill="#52BE97" stroke="#000000" stroke-miterlimit="10" points="132.8,480.2 90.9,433.4 132.8,386.5 216.4,386.5 
 		258.3,433.4 216.4,480.2 	"/>
 	<path fill="#E9E9E9" stroke="#000000" stroke-miterlimit="10" d="M447.4,427.4c0,0-36.6-10.8-54.6,16.4
-		c-23.6,35.8-54.6,16.4-54.6,16.4V323.4h109.1V427.4z"/>
+		c-23.6,35.8-54.6,16.4-54.6,16.4V323.4h109.1v104H447.4z"/>
 	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="596.4,287.4 493,322.3 497.6,336.2 466.5,320.7 
 		481.3,290.8 485.5,303.2 589.7,267.9 	"/>
 	<polygon fill="#EF5558" stroke="#000000" stroke-miterlimit="10" points="600.2,387.4 491.1,387.4 491.1,401.9 466.5,377.4 
@@ -56,7 +56,7 @@
 	
 		<text transform="matrix(0.948 0.3182 -0.3182 0.948 477.8582 442.3364)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4588">Network Events</text>
 	
-		<text transform="matrix(0.9455 -0.3255 0.3255 0.9455 500.1199 314.9495)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.46">Mouse Clicks</text>
+		<text transform="matrix(0.9455 -0.3255 0.3255 0.9455 500.12 314.9491)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4594">Mouse Clicks</text>
 	
 		<text transform="matrix(1 -7.070674e-03 7.070674e-03 1 503.1815 381.8865)" fill="#FFFFFF" font-family="'OpenSans-Semibold'" font-size="15.4595">Keypresses</text>
 </g>
