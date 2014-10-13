@@ -43,6 +43,11 @@
 		I am ...
 	-->
 	<h2><img src="images/AngularJS-Shield-small.png" alt="Angular Shield" />AngularJS Promises <span>Sequential Async</span></h2>
+    <div style="position: absolute; bottom: 2em; right: 2em; text-align: right" class="presenters col-md-10 col-md-offset-1">
+        <p>Scott <span class="twitterHandle">@scottlsoward</p>
+        <p>Nils <span class="twitterHandle">@nilsynils</p>
+        <p>http://ssoward.github.io/sort2014</p>
+    </div>
 </section>
 
 <section id="b" class="slide">
@@ -54,11 +59,6 @@
 			<li class="col-md-3">Promise<br /><img src="images/promises.png" alt="promises"></li>
 			<li class="col-md-3">AngularJS<br /><img src="images/AngularJS-Shield-small.png" alt="angularJS"></li>
 		</ul>
-	</div>
-	<div class="presenters col-md-10 col-md-offset-1">
-		<p>Scott <span class="twitterHandle">@scottlsoward</p>
-		<p>Nils <span class="twitterHandle">@nilsynils</p>
-		<p>http://ssoward.github.io/sort2014</p>
 	</div>
 	<div class="shield"></div>
 </section>
@@ -107,7 +107,7 @@
 		<li>Iphone assembly line worker: receives instructions on what to do after he is done.</li>
 	</ul>
 	-->
-	<h2><img src="images/browser.png" alt="browser">Callbacks</h2>
+	<h2><img src="images/browser.png" alt="browser">First Class Functions</h2>
 	<section>
 		<div class="col-md-10 col-md-offset-1">
 			<!--<div data-height="479" data-theme-id="9061" data-slug-hash="GmcvK" data-default-tab="js" data-user="nilsynils" class='codepen'>
@@ -144,7 +144,7 @@
 		<li>AJAX = Asynchronous JavaScript and XML</li>
 	</ul>
 	-->
-	<h2><img src="images/ajax.png" alt="ajax">AJAX</h2>
+	<h2><img src="images/ajax.png" alt="ajax">Callbacks - AJAX</h2>
 	<section>
 		<ul class="list-inline text-right col-md-1">
 			<li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
@@ -189,6 +189,7 @@
 		<li>You Ugly!</li>
 		<li>This is raw AJAX</li>
 		<li>Old school way of interacting with the windows XMLHttpRequest object</li>
+		<li>Callback function is the onreadystatechange and when the request comes back, we can update the div</li>
 	</ul>
 	-->
 	<h2><img src="images/ajax.png" alt="ajax">AJAX</h2>
@@ -302,6 +303,7 @@
 	<!--
 	<ul>
 		<li>This is a contrived example of how the promise works</li>
+		<li>The return of this function is an object with the function named THEN</li>
 		<li>1. the loadXMLDocThen calls a service via AJAX</li>
 		<li>2. the return of the loadXMLDocThen is an object with a then function</li>
 		<li>3. the then function takes in a function as its input</li>
@@ -483,7 +485,13 @@
 <section id="q" class="slide" ng-app="myApp">
 	<!--
 	<ul>
-		<li></li>
+		<li>A promise / deferred implementation inspired by Kris Kowal's Q</li>
+		<li>This implementation of q was also used to create the $http</li>
+		<li>step 1. q.defer</li>
+		<li>step 2. Check for valid value</li>
+		<li>step 3. return promise</li>
+		<li>There are times in your service call where you might want to have cached values, if exists return cache else fetch from server. q provides a convenient way to wrap a value and return a promise</li>
+
 	</ul>
 	-->
 	<h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q</h2>
@@ -533,12 +541,16 @@
 	</ul>
 	-->
 	<div class="shield"></div>
-	<h2>Questions?</h2>
-	<div class="presenters col-md-10 col-md-offset-1">
-		<p>Scott <span class="twitterHandle">@scottlsoward</p>
-		<p>Nils <span class="twitterHandle">@nilsynils</p>
-		<p>http://ssoward.github.io/sort2014</p>
-	</div>
+
+	<h2>Take Aways</h2>
+	<ul class="darkbg" style="background-color: rgba(0,0,0,0.5); list-style: none; padding: 1em; border-radius: 10px">
+        <li>JavaScript functions can be passed as arguments to functions</li>
+        <li>Callbacks: functions that are run after AJAX returns</li>
+        <li>Promises the eventual result of an AJAX operation</li>
+        <li>Promises are accessed by '.then' function</li>
+        <li>$http abstracts promises in an easy-to-use framework</li>
+        <li>$q provides an easy way to create a promise and exposes $q.all()</li>
+	</ul>
 </section>
 
 <section id="r1" class="slide" ng-app="myApp">
@@ -643,18 +655,18 @@
 
 	// Callbacks
 
-	var callback = function(param1){
-		console.log(5 + param1);
-	};
-
-	//input param is a function
-	function runMeFirst(runThisWhenDone){
-		//... do something
-		var response = Math.random();
-		runThisWhenDone(response);
-	}
-
-	runMeFirst(callback);
+//	var nextStep = function(param1){
+//		console.log(5 + param1);
+//	};
+//
+//	//input param is a function
+//	function batteryDude(doWhenDone){
+//		//... do something
+//		var response = Math.random();
+//        doWhenDone(response);
+//	}
+//    //iphone boss
+//    batteryDude(nextStep);
 
 
 
@@ -720,19 +732,19 @@
 		});
 	};
 
-	function anyFunction(){
-		var response = loadXMLDoc();
+	function batteryDude(){
+		var iphone = assembleBattery();
 		return {
-			then: function(callback) {
-				if (callback) {
-					callback(response);
+			then: function(nextStep) {
+				if (nextStep) {
+                    nextStep(iphone);
 				}
 			}
 		};
 	}
 
-	function promise() {
-		var promise = anyFunction();
+	function foxconn() {
+		var promise = batteryDude();
 
 		promise.then(function(res){
 			console.log(res);
