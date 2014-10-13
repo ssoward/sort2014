@@ -559,6 +559,10 @@ h2 {
 	background: url('../../images/zguitdork.jpg') center center repeat #000;
 	background-size: 100%;
 }
+#r1 {
+	background: url('../../images/sort.png') center center repeat #000;
+	background-size: 100%;
+}
 .explanation li strong {
 	text-transform: uppercase;
 }
