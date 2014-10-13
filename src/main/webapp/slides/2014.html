@@ -146,10 +146,13 @@
 	-->
 	<h2><img src="images/ajax.png" alt="ajax">Callbacks - AJAX</h2>
 	<section>
-		<ul class="list-inline text-right col-md-1">
-			<li><a class="btn btn-primary" onclick="buttonClick2()">Call me back</a></li>
+		<ul class="col-md-2" style="font-size: 0.7em; list-style: none">
+			<li><a class="btn btn-primary" onclick="foxconn()">Call me back</a></li>
+            <li><div id="callback21"></div> </li>
+            <li><div id="callback22"></div> </li>
+            <li><div id="callback23"></div> </li>
 		</ul>
-		<div class="col-md-10">
+		<div class="col-md-9">
 			<!-- <div data-height="450" data-theme-id="9061" data-slug-hash="DFBkp" data-default-tab="js" data-user="nilsynils" class='codepen'>
 				<pre>
 					<code>
@@ -194,9 +197,9 @@
 	-->
 	<h2><img src="images/ajax.png" alt="ajax">AJAX</h2>
 	<div class="col-md-3">
-		<div id="ajaxDiv">Some Static data</div>
 		<a class="btn btn-primary" onclick="loadXMLDoc('ajaxDiv')">Call me back</a>
-	</div>
+        <div id="ajaxDiv"></div>
+    </div>
 	<div class="col-md-9">
 		<div class="figure">
 			<img class="img_width" src="images/ajaxOldSchool.png"/>
@@ -655,17 +658,17 @@
 
 	// Callbacks
 
-//	var nextStep = function(param1){
-//		console.log(5 + param1);
-//	};
-//
-//	//input param is a function
+	var nextStep = function(param1){
+		console.log(5 + param1);
+	};
+
+	//input param is a function
 //	function batteryDude(doWhenDone){
 //		//... do something
-//		var response = Math.random();
-//        doWhenDone(response);
+//		var iPhone = Math.random();
+//        doWhenDone(iPhone);
 //	}
-//    //iphone boss
+    //iphone boss
 //    batteryDude(nextStep);
 
 
@@ -674,21 +677,24 @@
 
 
 	var callMeAfter = function(data){
-		console.log(data);
+//		console.log(data);
+        consoleLogAdd('callback23', data);
 	};
 
-	function simulateAJAX(runWhenDone){
+	function batteryDude(runWhenDone){
 		//... do something that creates delay (AJAX-esk)
 		setTimeout(function(){
-			var response = Math.random();
-			runWhenDone(response);
+			var iPhone = Math.random();
+			runWhenDone(iPhone);
 		}, 3000);
 	}
 
-	function buttonClick2() {
-		console.log('start');
-		simulateAJAX(callMeAfter);
-		console.log('No Blocking!!');
+	function foxconn() {
+//		console.log('Start');
+        consoleLogAdd('callback21', 'Start');
+        batteryDude(callMeAfter);
+        consoleLogAdd('callback22', 'No Blocking!!');
+//        console.log('No Blocking!!');
 	}
 
 
@@ -732,24 +738,24 @@
 		});
 	};
 
-	function batteryDude(){
-		var iphone = assembleBattery();
-		return {
-			then: function(nextStep) {
-				if (nextStep) {
-                    nextStep(iphone);
-				}
-			}
-		};
-	}
-
-	function foxconn() {
-		var promise = batteryDude();
-
-		promise.then(function(res){
-			console.log(res);
-		});
-	}
+//	function batteryDude(){
+//		var iphone = assembleBattery();
+//		return {
+//			then: function(nextStep) {
+//				if (nextStep) {
+//                    nextStep(iphone);
+//				}
+//			}
+//		};
+//	}
+//
+//	function foxconn() {
+//		var promise = batteryDude();
+//
+//		promise.then(function(res){
+//			console.log(res);
+//		});
+//	}
 
 </script>
 
