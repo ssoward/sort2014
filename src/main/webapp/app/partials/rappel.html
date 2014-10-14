@@ -1,0 +1,72 @@
+<style>
+    .img_width{
+        width: 600px;
+        border: 5px solid;
+    }
+</style>
+<link rel="stylesheet" href="css/bootstrap.css.min.css"><!-- Modernizr.-->
+
+<div class="page-header">
+    <h1>Rappelling <small>belay on</small></h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <!-- harness -->
+        <div ng-if="harness" class="alert-success">Your harness is on.</div>
+        <div ng-if="!harness" class="alert-danger">Put your harness on.</div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" ng-click="harnessOnOff(true)" id="optionsRadios1" ng-value="true" ng-model="harnessToggle">
+                Put on your harness.
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" ng-click="harnessOnOff(false)" id="optionsRadios2" ng-value="false" ng-model="harnessToggle">
+                Take off the harness.
+            </label>
+        </div>
+        <!-- harness and rope -->
+        <div ng-if="harnessRope" class="alert-success">Your harness is secure to the rope.</div>
+        <div ng-if="!harnessRope" class="alert-danger">Secure the rope on your harness.</div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios1" ng-click="anchorHarnessOnOff(true)">
+                Secure the rope to your harness.
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios1" ng-click="anchorHarnessOnOff(false)">
+                Remove the rope from your harness.
+            </label>
+        </div>
+        <!-- anchor and shrub -->
+        <div ng-if="anchorRope" class="alert-success">Your rope is secure to the shrub.</div>
+        <div ng-if="!anchorRope" class="alert-danger">Secure the rope on the shrub.</div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios3" ng-click="anchorShrubOnOff(true)">
+                Secure the rope to the shrub.
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios3" ng-click="anchorShrubOnOff(false)">
+                Remove the rope from the shrub.
+            </label>
+        </div>
+
+        <div class="inline">
+            <button ng-click="rappelOn()" class="btn btn-primary btn-lg">Rappel On!</button>
+            <a ng-click="rappelPrepare()" class="btn btn-default">Prepare</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div ng-if="view.timeToRappel" style="float: right">
+            <div ng-if="rappelOnRIP"><img class="img_width alert-success" ng-src="../slides/images/rappelSuccess{{successPic}}.jpg"/></div>
+            <div ng-if="!rappelOnRIP"><img class="img_width alert-danger" ng-src="../slides/images/rip1.jpg"/></div>
+        </div>
+    </div>
+</div>

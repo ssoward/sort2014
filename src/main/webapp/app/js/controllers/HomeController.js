@@ -8,7 +8,7 @@ var homeController = angular.module('myApp').controller('HomeController', functi
         });
     }
 
-    init();
+    //init();
 
     // DEFER ------------
 
@@ -35,6 +35,6 @@ homeController.fetchData = function($q, $timeout){
     $timeout(function (){
         defer.reject('There was something wrong with the http call');
 //    defer.resolve();
-    }, 5000);
+    }, 500);
     return defer.promise;
 }

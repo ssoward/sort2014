@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 a, a:active, a:visited, a:hover {
-  color: #444 !important;
+  color: #43b2e5;
   text-decoration: none;
 }
 a:hover {
-  color: #cfcfcf !important;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -27,7 +27,7 @@ a:hover {
 .deck-container .slide h2 {
   font-size: 1.8em;
   text-align: left;
-  color: #933;
+  color: #fff;
 }
 
 .deck-container .slide h3 {
@@ -80,7 +80,7 @@ div a,
 .subtitle {
   color: inherit;
   text-decoration: none;
-  padding: 0 0.1em;
+  padding: 0.1em 0.5em;
   background: rgba(200,200,200,0.5);
   text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
   border-radius: 0.2em;
@@ -94,7 +94,7 @@ div a,
 
 div a:hover {
     background: rgba(50,50,50,1);
-    color: #cfcfcf;
+    color: #fff;
     text-shadow: -1px -1px 2px rgba(25,25,25,0.5);
 }
 body {

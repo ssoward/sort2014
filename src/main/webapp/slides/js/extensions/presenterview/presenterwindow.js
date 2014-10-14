@@ -1,7 +1,7 @@
 /**
 * set interval to read localStorage
 */
-window.setInterval("update()", 200);
+window.setInterval("update()", 300);
 
 var stylesheets = JSON.parse(localStorage.getItem('stylesheets'));
 
@@ -24,9 +24,15 @@ function update() {
     note.innerHTML      = 'NOTES:<br/>'+localStorage.getItem('notes');
 
     var currInner           = 'CURRENT:<br/>'+localStorage.getItem('curr_slide');
-    currInner = currInner.replace("<img", "IMG");
+    currInner = currInner.replace(/\n|<img.*?>/g,'');
+    currInner = currInner.replace(/\n|<script.*?>/g,'');
+    currInner = currInner.replace(/\n|<iframe.*?>/g,'');
     curr.innerHTML      = currInner;
+
+
     var nextInner       = 'NEXT:<br/>'+localStorage.getItem('next_slide');
-    nextInner = nextInner.replace("<img", "IMG");
+    nextInner = nextInner.replace(/\n|<img.*?>/g,'');
+    nextInner = nextInner.replace(/\n|<script.*?>/g,'');
+    nextInner = nextInner.replace(/\n|<iframe.*?>/g,'');
     next.innerHTML      = nextInner;
 }
