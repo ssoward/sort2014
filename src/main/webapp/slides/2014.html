@@ -294,10 +294,11 @@
     <ul>
         <li>This is a contrived example of how the promise works</li>
         <li>The return of this function is an object with the function named THEN</li>
-        <li>1. the loadXMLDocThen calls a service via AJAX</li>
-        <li>2. the return of the loadXMLDocThen is an object with a then function</li>
-        <li>3. the then function takes in a function as its input</li>
-        <li>4. the then function executes the input function with the AJAX result as the value</li>
+        <li>the batteryDude calls a service via AJAX</li>
+        <li>the return of the batteryDude is an object with a then function</li>
+        <li>the then function takes in a function as its input</li>
+        <li>the then function executes the input function with the AJAX result as the value</li>
+        <li>notice the similarities between the callback model and promise model</li>
     </ul>
     -->
     <h2><img src="images/promises.png" alt="promises">Promise</h2>
@@ -520,12 +521,7 @@
                 <li><p><span class="kwd">then</span><span class="pun">(</span><span class="pln">successCallback</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">,</span><span class="pln"> notifyCallback</span><span class="pun">)</span> – regardless of when the promise was or
                     will be resolved or rejected, <span class="kwd">then</span> calls one of the success or error callbacks asynchronously
                     as soon as the result is available. The callbacks are called with a single argument: the result
-                    or rejection reason. Additionally, the notify callback may be called zero or more times to
-                    provide a progress indication, before the promise is resolved or rejected.</p>
-                    <p>This method <em>returns a new promise</em> which is resolved or rejected via the return value of the
-                        <span class="pln">successCallback</span>, <span class="pln">errorCallback</span>. It also notifies via the return value of the
-                        <span class="pln">notifyCallback</span> method. The promise cannot be resolved or rejected from the notifyCallback
-                        method.</p>
+                    or rejection reason. </p>
                 </li>
                 <li><p><span class="kwd">catch</span><span class="pun">(</span><span class="pln">errorCallback</span><span class="pun">)</span> – shorthand for <span class="pln">promise</span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">)</span></p>
                 </li>
@@ -534,9 +530,6 @@
                     clean-up that needs to be done whether the promise was rejected or resolved. See the <a href="https://github.com/kriskowal/q/wiki/API-Reference#promisefinallycallback">full
                         specification</a> for
                     more information.</p>
-                    <p>Because <span class="kwd">finally</span> is a reserved word in JavaScript and reserved keywords are not supported as
-                        property names by ES3, you'll need to invoke the method like <span class="pln">promise</span><span class="pun">[</span><span class="str">'finally'</span><span class="pun">](</span><span class="pln">callback</span><span class="pun">)</span> to
-                        make your code IE8 and Android 2.x compatible.</p>
                 </li>
             </ul>
     -->
@@ -549,8 +542,7 @@
             <ol>
                 <li>
                     <p><span class="kwd">then</span><span class="pun">(</span><span class="pln">successCallback</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">,</span><span class="pln"> notifyCallback</span><span class="pun">)</span>
-                        <span class="kwd">then</span> calls one of the success or error callbacks asynchronously
-                        as soon as the result is available.</p>
+                        calls one of the success or error callbacks asynchronously as soon as the result is available.</p>
                 </li>
                 <li><p><span class="kwd">catch</span><span class="pun">(</span><span class="pln">errorCallback</span><span class="pun">)</span> – shorthand for <span class="pln">promise</span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">)</span></p>
                 </li>
