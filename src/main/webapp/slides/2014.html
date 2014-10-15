@@ -140,7 +140,7 @@
                           var response = Math.random();
                           callback(response);
                         };
-                    </code>
+
                 </pre>
                 <p>See the Pen <a href='http://codepen.io/nilsynils/pen/GmcvK/'>GmcvK</a> by Nils Rasmusson (<a href='http://codepen.io/nilsynils'>@nilsynils</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
             </div>
@@ -475,8 +475,98 @@
 <section id="q" class="slide" ng-app="myApp">
     <!--
     <ul>
+        <li>A promise / deferred implementation inspired by Kris Kowal's <a target="_blank" href="https://github.com/kriskowal/q">Q</a>.</li>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q</h2>
+    <div>
+        <p>A promise / deferred implementation inspired by Kris Kowal's <a target="_blank" href="https://github.com/kriskowal/q">Q</a>.</p>
+    </div>
+    <div class="figure">
+        <img style="height: 500px" src="images/onion.jpg"/>
+    </div>
+</section>
+
+<section id="q1" class="slide" ng-app="myApp">
+    <!--
+    <ul>
         <li>The purpose of the deferred object is to expose the Promise instance as well as APIs for signaling; successful, unsuccessful, as well as the status of the task.</li>
-        <li>Methods Of Promise:</li>
+        <li>Methods Of Deferred:</li>
+            <ol>
+                <li>resolve(value) – resolves the derived promise with the value. </li>
+                <li>reject(reason) – rejects the derived promise with the reason. </li>
+                <li>notify(value) - provides updates on the status of the promise's execution. This may be called multiple times before the promise is either resolved or rejected.</li>
+             </ol>
+    </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">The Deferred API</h2>
+    <div class="col-md-2 col-md-offset-1">
+        <p>$q.defer()</p>
+    </div>
+    <div class="col-md-8" style="padding-top: 2em">
+        <div class="figure">
+            <ol>
+                <li>resolve(value) – resolves the derived promise with the value. </li>
+                <li>reject(reason) – rejects the derived promise with the reason. </li>
+                <li>notify(value) - provides updates on the status of the promise's execution. This may be called multiple times before the promise is either resolved or rejected.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section id="q3" class="slide" ng-app="myApp">
+    <!--
+     <ul>
+                <li><p><span class="kwd">then</span><span class="pun">(</span><span class="pln">successCallback</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">,</span><span class="pln"> notifyCallback</span><span class="pun">)</span> – regardless of when the promise was or
+                    will be resolved or rejected, <span class="kwd">then</span> calls one of the success or error callbacks asynchronously
+                    as soon as the result is available. The callbacks are called with a single argument: the result
+                    or rejection reason. Additionally, the notify callback may be called zero or more times to
+                    provide a progress indication, before the promise is resolved or rejected.</p>
+                    <p>This method <em>returns a new promise</em> which is resolved or rejected via the return value of the
+                        <span class="pln">successCallback</span>, <span class="pln">errorCallback</span>. It also notifies via the return value of the
+                        <span class="pln">notifyCallback</span> method. The promise cannot be resolved or rejected from the notifyCallback
+                        method.</p>
+                </li>
+                <li><p><span class="kwd">catch</span><span class="pun">(</span><span class="pln">errorCallback</span><span class="pun">)</span> – shorthand for <span class="pln">promise</span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">)</span></p>
+                </li>
+                <li><p><span class="kwd">finally</span><span class="pun">(</span><span class="pln">callback</span><span class="pun">)</span> – allows you to observe either the fulfillment or rejection of a promise,
+                    but to do so without modifying the final value. This is useful to release resources or do some
+                    clean-up that needs to be done whether the promise was rejected or resolved. See the <a href="https://github.com/kriskowal/q/wiki/API-Reference#promisefinallycallback">full
+                        specification</a> for
+                    more information.</p>
+                    <p>Because <span class="kwd">finally</span> is a reserved word in JavaScript and reserved keywords are not supported as
+                        property names by ES3, you'll need to invoke the method like <span class="pln">promise</span><span class="pun">[</span><span class="str">'finally'</span><span class="pun">](</span><span class="pln">callback</span><span class="pun">)</span> to
+                        make your code IE8 and Android 2.x compatible.</p>
+                </li>
+            </ul>
+    -->
+    <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">The Promise API</h2>
+    <div class="col-md-2 col-md-offset-1">
+        <p>$q.defer().promise</p>
+    </div>
+    <div class="col-md-8" style="padding-top: 2em">
+        <div class="figure">
+            <ol>
+                <li>
+                    <p><span class="kwd">then</span><span class="pun">(</span><span class="pln">successCallback</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">,</span><span class="pln"> notifyCallback</span><span class="pun">)</span>
+                        <span class="kwd">then</span> calls one of the success or error callbacks asynchronously
+                        as soon as the result is available.</p>
+                </li>
+                <li><p><span class="kwd">catch</span><span class="pun">(</span><span class="pln">errorCallback</span><span class="pun">)</span> – shorthand for <span class="pln">promise</span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> errorCallback</span><span class="pun">)</span></p>
+                </li>
+                <li><p><span class="kwd">finally</span><span class="pun">(</span><span class="pln">callback</span><span class="pun">)</span>
+                    – allows you to observe either the fulfillment or rejection of a promise.</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section id="q2" class="slide" ng-app="myApp">
+    <!--
+    <ul>
+        <li>The purpose of the deferred object is to expose the Promise instance as well as APIs for signaling; successful, unsuccessful, as well as the status of the task.</li>
+        <li>Methods Of Deferred:</li>
             <ol>
                 <li>resolve(value) – resolves the derived promise with the value. </li>
                 <li>reject(reason) – rejects the derived promise with the reason. </li>
@@ -486,7 +576,6 @@
     -->
     <h2><img src="images/AngularJS-Shield-small.png" alt="angularJS">$q</h2>
     <div class="col-md-2 col-md-offset-1">
-        <p>A promise / deferred implementation inspired by Kris Kowal's <a target="_blank" href="https://github.com/kriskowal/q">Q</a>.</p>
     </div>
     <div class="col-md-8">
         <div class="figure">
@@ -532,7 +621,7 @@
         <li>Promises the eventual result of an AJAX operation</li>
         <li>Promises are accessed by '.then' function</li>
         <li>$http returns a promise and provides success and error methods</li>
-        <li>$q has API and exposes promise API. $q.all()</li>
+        <li>$q.defer() has API and exposes promise API. $q.all()</li>
         <li>$q.all()</li>
     </ul>
     -->
