@@ -77,20 +77,17 @@ angular.module('myApp').controller('RopeController', function ($scope, RopeServi
         defer.resolve();
         defer.reject("Error occurred");
     };
-
+//
 //    $scope.rappelPrepare = function(){
-//        var defer = $q.defer();
-//        var promise = defer.promise;
 //        var promises = [];
 //
 //        promises.push( $scope.harnessOnOff(true));
 //        promises.push( $scope.anchorShrubOnOff(true));
 //        promises.push( $scope.anchorHarnessOnOff(true));
 //
-//        $q.all(promises);
+//        var all = $q.all(promises);
 //
-//        defer.resolve();
-//        promise.then(function(){
+//        all.then(function(){
 //            $scope.rappelOn();
 //        })
 //    };
